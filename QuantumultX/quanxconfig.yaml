@@ -1,0 +1,126 @@
+[general]
+excluded_routes=192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10, 10.0.0.0/8
+geo_location_checker=https://raw.githubusercontent.com/thuhollow2/qure/main/Other/IP_API.js
+network_check_url=http://www.baidu.com/
+server_check_url=http://www.gstatic.com/generate_204
+
+[dns]
+server=119.29.29.29
+server=223.5.5.5
+server=1.0.0.1
+server=8.8.8.8
+
+[policy]
+static=🚀 节点选择, ♻️ 自动选择, ♻️ IPv6, 🚀 手动切换-1, 🚀 手动切换-2, 🎥 流媒体解锁, 👍 高级节点, 📺 省流节点, 🇨🇳 大陆节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇲🇾 马来西亚节点, 🇹🇭 泰国节点, 🇻🇳 越南节点, 🇰🇭 柬埔寨节点, 🇮🇩 印度尼西亚节点, 🇵🇭 菲律宾节点, 🇮🇳 印度节点, 🇹🇷 土耳其节点, 🇦🇺 澳大利亚节点, 🇳🇿 新西兰节点, 🇨🇦 加拿大节点, 🇷🇺 俄罗斯节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇵🇱 波兰节点, 🇩🇰 丹麦节点, 🇳🇴 挪威节点, 🇸🇪 瑞典节点, 🇫🇮 芬兰节点, 🇮🇸 冰岛节点, 🇨🇭 瑞士节点, 🇬🇷 希腊节点, 🇳🇱 荷兰节点, 🇧🇷 巴西节点, 🇪🇬 埃及节点, DIRECT, REJECT, img-url=https://raw.githubusercontent.com/thuhollow2/qure/main/IconSet/Color/Proxy.png
+url-latency-benchmark=♻️ 自动选择, 本文件创建时间：Sun Apr 30 08:32:42 UTC 2023, Relay_🇺🇸US-🇺🇸US_1650, Relay_🇺🇸US-🇺🇸US_1652, Relay_🇺🇸US-🇺🇸US_1646, 美国_0430561, Relay_🇺🇸US-🇺🇸US_1649, Relay_🇺🇸US-🇺🇸US_1647, Relay_🇺🇸US-🇺🇸US_1653, 🇭🇰_HK_香港_1_0@7, Relay_🇺🇸US-🇺🇸US_1648, Relay_🇦🇺AU-🇦🇺AU_23, 德国_0430030, 🇵🇦_PA_巴拿马_24@1, Relay_🇦🇺AU-🇦🇺AU_1134, Relay_🇺🇸US-🇺🇸US_1651, 德国_0430031, 🇯🇵JP-54.178.9.238-15352, 🇯🇵JP-43.207.100.84-1066, 🇮🇳_IN_印度_0@6, _21, 未知_04302657, img-url=https://raw.githubusercontent.com/thuhollow2/qure/main/IconSet/Color/Auto.png
+url-latency-benchmark=♻️ IPv6, 🇵🇦_PA_巴拿马_24@1, _21, img-url=https://raw.githubusercontent.com/thuhollow2/qure/main/IconSet/Color/Auto.png
+static=🚀 手动切换-1, 本文件创建时间：Sun Apr 30 08:32:42 UTC 2023, Relay_🇺🇸US-🇺🇸US_1650, Relay_🇺🇸US-🇺🇸US_1652, Relay_🇺🇸US-🇺🇸US_1646, 美国_0430561, Relay_🇺🇸US-🇺🇸US_1649, Relay_🇺🇸US-🇺🇸US_1647, Relay_🇺🇸US-🇺🇸US_1653, 🇭🇰_HK_香港_1_0@7, Relay_🇺🇸US-🇺🇸US_1648, Relay_🇦🇺AU-🇦🇺AU_23, 德国_0430030, 🇵🇦_PA_巴拿马_24@1, Relay_🇦🇺AU-🇦🇺AU_1134, Relay_🇺🇸US-🇺🇸US_1651, 德国_0430031, 🇯🇵JP-54.178.9.238-15352, 🇯🇵JP-43.207.100.84-1066, 🇮🇳_IN_印度_0@6, _21, 未知_04302657
+static=🚀 手动切换-2, 本文件创建时间：Sun Apr 30 08:32:42 UTC 2023, Relay_🇺🇸US-🇺🇸US_1650, Relay_🇺🇸US-🇺🇸US_1652, Relay_🇺🇸US-🇺🇸US_1646, 美国_0430561, Relay_🇺🇸US-🇺🇸US_1649, Relay_🇺🇸US-🇺🇸US_1647, Relay_🇺🇸US-🇺🇸US_1653, 🇭🇰_HK_香港_1_0@7, Relay_🇺🇸US-🇺🇸US_1648, Relay_🇦🇺AU-🇦🇺AU_23, 德国_0430030, 🇵🇦_PA_巴拿马_24@1, Relay_🇦🇺AU-🇦🇺AU_1134, Relay_🇺🇸US-🇺🇸US_1651, 德国_0430031, 🇯🇵JP-54.178.9.238-15352, 🇯🇵JP-43.207.100.84-1066, 🇮🇳_IN_印度_0@6, _21, 未知_04302657
+static=🛑 广告拦截, DIRECT, REJECT, img-url=https://raw.githubusercontent.com/thuhollow2/qure/main/IconSet/Color/Advertising.png
+static=📢 ChatGPT, 🚀 节点选择, ♻️ 自动选择, 🚀 手动切换-1, 🚀 手动切换-2, 👍 高级节点, 📺 省流节点, 🇨🇳 大陆节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇲🇾 马来西亚节点, 🇹🇭 泰国节点, 🇻🇳 越南节点, 🇰🇭 柬埔寨节点, 🇮🇩 印度尼西亚节点, 🇵🇭 菲律宾节点, 🇮🇳 印度节点, 🇹🇷 土耳其节点, 🇦🇺 澳大利亚节点, 🇳🇿 新西兰节点, 🇨🇦 加拿大节点, 🇷🇺 俄罗斯节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇵🇱 波兰节点, 🇩🇰 丹麦节点, 🇳🇴 挪威节点, 🇸🇪 瑞典节点, 🇫🇮 芬兰节点, 🇮🇸 冰岛节点, 🇨🇭 瑞士节点, 🇬🇷 希腊节点, 🇳🇱 荷兰节点, 🇧🇷 巴西节点, 🇪🇬 埃及节点, DIRECT, REJECT, img-url=https://raw.githubusercontent.com/thuhollow2/qure/main/IconSet/Color/Star.png
+static=📢 Bard, 🚀 节点选择, ♻️ 自动选择, 🚀 手动切换-1, 🚀 手动切换-2, 🇺🇸 美国节点, 🇬🇧 英国节点, DIRECT, REJECT, img-url=https://raw.githubusercontent.com/thuhollow2/qure/main/IconSet/Color/Star.png
+static=Ⓜ️ NewBing, 🚀 节点选择, ♻️ 自动选择, 🚀 手动切换-1, 🚀 手动切换-2, 👍 高级节点, 📺 省流节点, 🇨🇳 大陆节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇲🇾 马来西亚节点, 🇹🇭 泰国节点, 🇻🇳 越南节点, 🇰🇭 柬埔寨节点, 🇮🇩 印度尼西亚节点, 🇵🇭 菲律宾节点, 🇮🇳 印度节点, 🇹🇷 土耳其节点, 🇦🇺 澳大利亚节点, 🇳🇿 新西兰节点, 🇨🇦 加拿大节点, 🇷🇺 俄罗斯节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇵🇱 波兰节点, 🇩🇰 丹麦节点, 🇳🇴 挪威节点, 🇸🇪 瑞典节点, 🇫🇮 芬兰节点, 🇮🇸 冰岛节点, 🇨🇭 瑞士节点, 🇬🇷 希腊节点, 🇳🇱 荷兰节点, 🇧🇷 巴西节点, 🇪🇬 埃及节点, DIRECT, REJECT, img-url=https://raw.githubusercontent.com/thuhollow2/qure/main/IconSet/Color/Microsoft.png
+static=Ⓜ️ 微软服务, DIRECT, 🚀 节点选择, ♻️ 自动选择, ♻️ IPv6, 🚀 手动切换-1, 🚀 手动切换-2, 👍 高级节点, 📺 省流节点, 🇨🇳 大陆节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇲🇾 马来西亚节点, 🇹🇭 泰国节点, 🇻🇳 越南节点, 🇰🇭 柬埔寨节点, 🇮🇩 印度尼西亚节点, 🇵🇭 菲律宾节点, 🇮🇳 印度节点, 🇹🇷 土耳其节点, 🇦🇺 澳大利亚节点, 🇳🇿 新西兰节点, 🇨🇦 加拿大节点, 🇷🇺 俄罗斯节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇵🇱 波兰节点, 🇩🇰 丹麦节点, 🇳🇴 挪威节点, 🇸🇪 瑞典节点, 🇫🇮 芬兰节点, 🇮🇸 冰岛节点, 🇨🇭 瑞士节点, 🇬🇷 希腊节点, 🇳🇱 荷兰节点, 🇧🇷 巴西节点, 🇪🇬 埃及节点, REJECT, img-url=https://raw.githubusercontent.com/thuhollow2/qure/main/IconSet/Color/Microsoft.png
+static=🍎 苹果服务, DIRECT, 🚀 节点选择, ♻️ 自动选择, ♻️ IPv6, 🚀 手动切换-1, 🚀 手动切换-2, 👍 高级节点, 📺 省流节点, 🇨🇳 大陆节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇲🇾 马来西亚节点, 🇹🇭 泰国节点, 🇻🇳 越南节点, 🇰🇭 柬埔寨节点, 🇮🇩 印度尼西亚节点, 🇵🇭 菲律宾节点, 🇮🇳 印度节点, 🇹🇷 土耳其节点, 🇦🇺 澳大利亚节点, 🇳🇿 新西兰节点, 🇨🇦 加拿大节点, 🇷🇺 俄罗斯节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇵🇱 波兰节点, 🇩🇰 丹麦节点, 🇳🇴 挪威节点, 🇸🇪 瑞典节点, 🇫🇮 芬兰节点, 🇮🇸 冰岛节点, 🇨🇭 瑞士节点, 🇬🇷 希腊节点, 🇳🇱 荷兰节点, 🇧🇷 巴西节点, 🇪🇬 埃及节点, REJECT, img-url=https://raw.githubusercontent.com/thuhollow2/qure/main/IconSet/Color/Apple.png
+static=🎮 国际游戏, DIRECT, 🚀 节点选择, ♻️ 自动选择, ♻️ IPv6, 🚀 手动切换-1, 🚀 手动切换-2, 👍 高级节点, 📺 省流节点, 🇨🇳 大陆节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇲🇾 马来西亚节点, 🇹🇭 泰国节点, 🇻🇳 越南节点, 🇰🇭 柬埔寨节点, 🇮🇩 印度尼西亚节点, 🇵🇭 菲律宾节点, 🇮🇳 印度节点, 🇹🇷 土耳其节点, 🇦🇺 澳大利亚节点, 🇳🇿 新西兰节点, 🇨🇦 加拿大节点, 🇷🇺 俄罗斯节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇵🇱 波兰节点, 🇩🇰 丹麦节点, 🇳🇴 挪威节点, 🇸🇪 瑞典节点, 🇫🇮 芬兰节点, 🇮🇸 冰岛节点, 🇨🇭 瑞士节点, 🇬🇷 希腊节点, 🇳🇱 荷兰节点, 🇧🇷 巴西节点, 🇪🇬 埃及节点, REJECT, img-url=https://raw.githubusercontent.com/thuhollow2/qure/main/IconSet/Color/Game.png
+static=🌍 国外媒体, 🚀 节点选择, ♻️ 自动选择, ♻️ IPv6, 🚀 手动切换-1, 🚀 手动切换-2, 🎥 流媒体解锁, 👍 高级节点, 📺 省流节点, 🇨🇳 大陆节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇲🇾 马来西亚节点, 🇹🇭 泰国节点, 🇻🇳 越南节点, 🇰🇭 柬埔寨节点, 🇮🇩 印度尼西亚节点, 🇵🇭 菲律宾节点, 🇮🇳 印度节点, 🇹🇷 土耳其节点, 🇦🇺 澳大利亚节点, 🇳🇿 新西兰节点, 🇨🇦 加拿大节点, 🇷🇺 俄罗斯节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇵🇱 波兰节点, 🇩🇰 丹麦节点, 🇳🇴 挪威节点, 🇸🇪 瑞典节点, 🇫🇮 芬兰节点, 🇮🇸 冰岛节点, 🇨🇭 瑞士节点, 🇬🇷 希腊节点, 🇳🇱 荷兰节点, 🇧🇷 巴西节点, 🇪🇬 埃及节点, DIRECT, REJECT, img-url=https://raw.githubusercontent.com/thuhollow2/qure/main/IconSet/Color/Media.png
+static=🌏 国内媒体, DIRECT, 🚀 节点选择, ♻️ 自动选择, ♻️ IPv6, 🚀 手动切换-1, 🚀 手动切换-2, 👍 高级节点, 📺 省流节点, 🇨🇳 大陆节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇲🇾 马来西亚节点, 🇹🇭 泰国节点, 🇻🇳 越南节点, 🇰🇭 柬埔寨节点, 🇮🇩 印度尼西亚节点, 🇵🇭 菲律宾节点, 🇮🇳 印度节点, 🇹🇷 土耳其节点, 🇦🇺 澳大利亚节点, 🇳🇿 新西兰节点, 🇨🇦 加拿大节点, 🇷🇺 俄罗斯节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇵🇱 波兰节点, 🇩🇰 丹麦节点, 🇳🇴 挪威节点, 🇸🇪 瑞典节点, 🇫🇮 芬兰节点, 🇮🇸 冰岛节点, 🇨🇭 瑞士节点, 🇬🇷 希腊节点, 🇳🇱 荷兰节点, 🇧🇷 巴西节点, 🇪🇬 埃及节点, REJECT, img-url=https://raw.githubusercontent.com/thuhollow2/qure/main/IconSet/Color/Media.png
+static=🎯 国内网站, DIRECT, 🚀 节点选择, ♻️ 自动选择, ♻️ IPv6, 🚀 手动切换-1, 🚀 手动切换-2, 👍 高级节点, 📺 省流节点, 🇨🇳 大陆节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇲🇾 马来西亚节点, 🇹🇭 泰国节点, 🇻🇳 越南节点, 🇰🇭 柬埔寨节点, 🇮🇩 印度尼西亚节点, 🇵🇭 菲律宾节点, 🇮🇳 印度节点, 🇹🇷 土耳其节点, 🇦🇺 澳大利亚节点, 🇳🇿 新西兰节点, 🇨🇦 加拿大节点, 🇷🇺 俄罗斯节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇵🇱 波兰节点, 🇩🇰 丹麦节点, 🇳🇴 挪威节点, 🇸🇪 瑞典节点, 🇫🇮 芬兰节点, 🇮🇸 冰岛节点, 🇨🇭 瑞士节点, 🇬🇷 希腊节点, 🇳🇱 荷兰节点, 🇧🇷 巴西节点, 🇪🇬 埃及节点, REJECT, img-url=https://raw.githubusercontent.com/thuhollow2/qure/main/IconSet/Color/Direct.png
+static=🐟 其他网站, DIRECT, 🚀 节点选择, ♻️ 自动选择, ♻️ IPv6, 🚀 手动切换-1, 🚀 手动切换-2, 👍 高级节点, 📺 省流节点, 🇨🇳 大陆节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇲🇾 马来西亚节点, 🇹🇭 泰国节点, 🇻🇳 越南节点, 🇰🇭 柬埔寨节点, 🇮🇩 印度尼西亚节点, 🇵🇭 菲律宾节点, 🇮🇳 印度节点, 🇹🇷 土耳其节点, 🇦🇺 澳大利亚节点, 🇳🇿 新西兰节点, 🇨🇦 加拿大节点, 🇷🇺 俄罗斯节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇵🇱 波兰节点, 🇩🇰 丹麦节点, 🇳🇴 挪威节点, 🇸🇪 瑞典节点, 🇫🇮 芬兰节点, 🇮🇸 冰岛节点, 🇨🇭 瑞士节点, 🇬🇷 希腊节点, 🇳🇱 荷兰节点, 🇧🇷 巴西节点, 🇪🇬 埃及节点, REJECT, img-url=https://raw.githubusercontent.com/thuhollow2/qure/main/IconSet/Color/Final.png
+static=🎥 流媒体解锁, direct, img-url=https://raw.githubusercontent.com/thuhollow2/qure/main/IconSet/Color/Unlock.png
+static=👍 高级节点, direct, img-url=https://raw.githubusercontent.com/thuhollow2/qure/main/IconSet/Color/VIP.png
+static=📺 省流节点, direct
+static=🇨🇳 大陆节点, direct
+static=🇭🇰 香港节点, 🇭🇰_HK_香港_1_0@7
+static=🇲🇴 澳门节点, direct
+static=🇹🇼 台湾节点, direct
+static=🇸🇬 新加坡节点, direct
+url-latency-benchmark=🇯🇵 日本节点, 🇯🇵JP-54.178.9.238-15352, 🇯🇵JP-43.207.100.84-1066
+static=🇰🇷 韩国节点, direct
+static=🇲🇾 马来西亚节点, direct
+static=🇹🇭 泰国节点, direct
+static=🇻🇳 越南节点, direct
+static=🇰🇭 柬埔寨节点, direct
+static=🇮🇩 印度尼西亚节点, direct
+static=🇵🇭 菲律宾节点, direct
+static=🇮🇳 印度节点, 🇮🇳_IN_印度_0@6
+static=🇹🇷 土耳其节点, direct
+url-latency-benchmark=🇦🇺 澳大利亚节点, Relay_🇦🇺AU-🇦🇺AU_23, Relay_🇦🇺AU-🇦🇺AU_1134
+static=🇳🇿 新西兰节点, direct
+static=🇨🇦 加拿大节点, direct
+static=🇷🇺 俄罗斯节点, direct
+url-latency-benchmark=🇺🇸 美国节点, Relay_🇺🇸US-🇺🇸US_1650, Relay_🇺🇸US-🇺🇸US_1652, Relay_🇺🇸US-🇺🇸US_1646, 美国_0430561, Relay_🇺🇸US-🇺🇸US_1649, Relay_🇺🇸US-🇺🇸US_1647, Relay_🇺🇸US-🇺🇸US_1653, Relay_🇺🇸US-🇺🇸US_1648, Relay_🇺🇸US-🇺🇸US_1651
+static=🇬🇧 英国节点, direct
+static=🇫🇷 法国节点, direct
+url-latency-benchmark=🇩🇪 德国节点, 德国_0430030, 德国_0430031
+static=🇵🇱 波兰节点, direct
+static=🇩🇰 丹麦节点, direct
+static=🇳🇴 挪威节点, direct
+static=🇸🇪 瑞典节点, direct
+static=🇫🇮 芬兰节点, direct
+static=🇮🇸 冰岛节点, direct
+static=🇨🇭 瑞士节点, direct
+static=🇬🇷 希腊节点, direct
+static=🇳🇱 荷兰节点, direct
+static=🇧🇷 巴西节点, direct
+static=🇪🇬 埃及节点, direct
+
+[server_remote]
+
+[filter_remote]
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/BanAD.list, tag=🛑 广告拦截, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/BanProgramAD.list, tag=🛑 广告拦截, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/Bing.list, tag=Ⓜ️ NewBing, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/Microsoft.list, tag=Ⓜ️ 微软服务, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/Apple.list, tag=🍎 苹果服务, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/Game.list, tag=🎮 国际游戏, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/ProxyMedia.list, tag=🌍 国外媒体, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/ChinaMedia.list, tag=🌏 国内媒体, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/ProxyGFWlist.list, tag=🚀 节点选择, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/LocalAreaNetwork.list, tag=🎯 国内网站, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/UnBan.list, tag=🎯 国内网站, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/ChinaDomain.list, tag=🎯 国内网站, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/ChinaCompanyIp.list, tag=🎯 国内网站, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/ChinaIp.list, tag=🎯 国内网站, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/GoogleCN.list, tag=🎯 国内网站, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/SteamCN.list, tag=🎯 国内网站, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/Download.list, tag=🎯 国内网站, enabled=true
+https://raw.githubusercontent.com/thuhollow2/rule/main/QuantumultX/Direct.list, tag=🎯 国内网站, enabled=true
+
+[rewrite_remote]
+
+[server_local]
+vmess = 255.255.255.255:10086, method=chacha20-ietf-poly1305, password=00000000-0000-0000-0000-000000000000, aead=true, fast-open=false, udp-relay=true, tag=本文件创建时间：Sun Apr 30 08:32:42 UTC 2023
+vmess = hk4.af49c4e4c2ef.sanfen004.me:443, method=chacha20-ietf-poly1305, password=a316207e-0d3b-4754-ae9f-a4ec13aacba9, aead=true, tls13=false, obfs=wss, obfs-host=www.microsoft.com, obfs-uri=/zh-cn, fast-open=false, udp-relay=true, tag=Relay_🇺🇸US-🇺🇸US_1650
+vmess = hk2.c2bfe79372be.sanfen004.me:443, method=chacha20-ietf-poly1305, password=30ba67cf-776c-48be-8bb5-578878830228, aead=true, tls13=false, obfs=wss, obfs-host=www.microsoft.com, obfs-uri=/zh-cn, fast-open=false, udp-relay=true, tag=Relay_🇺🇸US-🇺🇸US_1652
+vmess = hk2.c2bfe79372be.sanfen004.me:443, method=chacha20-ietf-poly1305, password=a316207e-0d3b-4754-ae9f-a4ec13aacba9, aead=true, tls13=false, obfs=wss, obfs-host=www.microsoft.com, obfs-uri=/zh-cn, fast-open=false, udp-relay=true, tag=Relay_🇺🇸US-🇺🇸US_1646
+vmess = 170.114.45.224:2053, method=chacha20-ietf-poly1305, password=eb049927-50cf-4fb6-a30f-ce8b6f256dbd, aead=true, tls13=false, obfs=wss, obfs-host=one.nikannetwork.xyz, obfs-uri=/, fast-open=false, udp-relay=true, tag=美国_0430561
+vmess = hk4.af49c4e4c2ef.sanfen004.me:443, method=chacha20-ietf-poly1305, password=30ba67cf-776c-48be-8bb5-578878830228, aead=true, tls13=false, obfs=wss, obfs-host=www.microsoft.com, obfs-uri=/zh-cn, fast-open=false, udp-relay=true, tag=Relay_🇺🇸US-🇺🇸US_1649
+vmess = hk5.af49c4e4c2ef.sanfen004.me:443, method=chacha20-ietf-poly1305, password=30ba67cf-776c-48be-8bb5-578878830228, aead=true, tls13=false, obfs=wss, obfs-host=www.microsoft.com, obfs-uri=/zh-cn, fast-open=false, udp-relay=true, tag=Relay_🇺🇸US-🇺🇸US_1647
+vmess = hk5.af49c4e4c2ef.sanfen004.me:443, method=chacha20-ietf-poly1305, password=a316207e-0d3b-4754-ae9f-a4ec13aacba9, aead=true, tls13=false, obfs=wss, obfs-host=www.microsoft.com, obfs-uri=/zh-cn, fast-open=false, udp-relay=true, tag=Relay_🇺🇸US-🇺🇸US_1653
+vmess = hk3.af49c4e4c2ef.sanfen004.me:443, method=chacha20-ietf-poly1305, password=a316207e-0d3b-4754-ae9f-a4ec13aacba9, aead=true, tls13=false, obfs=wss, obfs-host=hk3.af49c4e4c2ef.sanfen004.me, obfs-uri=/zh-cn, fast-open=false, udp-relay=true, tag=🇭🇰_HK_香港_1_0@7
+vmess = hk3.af49c4e4c2ef.sanfen004.me:443, method=chacha20-ietf-poly1305, password=a316207e-0d3b-4754-ae9f-a4ec13aacba9, aead=true, tls13=false, obfs=wss, obfs-host=www.microsoft.com, obfs-uri=/zh-cn, fast-open=false, udp-relay=true, tag=Relay_🇺🇸US-🇺🇸US_1648
+vmess = hk6.af49c4e4c2ef.sanfen004.me:443, method=chacha20-ietf-poly1305, password=29387883-aace-4e03-bad7-940bc5e6ba67, aead=true, tls13=false, obfs=wss, obfs-host=hk6.af49c4e4c2ef.sanfen004.me, obfs-uri=/zh-cn, fast-open=false, udp-relay=true, tag=Relay_🇦🇺AU-🇦🇺AU_23
+vmess = 85.208.107.119:38183, method=chacha20-ietf-poly1305, password=6b32d610-1e0c-45b0-e91d-af12ccaeed8b, aead=true, obfs=ws, obfs-host=85.208.107.119, obfs-uri=/, fast-open=false, udp-relay=true, tag=德国_0430030
+vmess = 185.143.220.25:443, method=chacha20-ietf-poly1305, password=f28e354e-c2d1-4983-9b07-5acaf1b3b3e5, aead=true, tls13=false, obfs=wss, obfs-host=, obfs-uri=/6e9EtZ2dL, fast-open=false, udp-relay=true, tag=🇵🇦_PA_巴拿马_24@1
+vmess = hk6.af49c4e4c2ef.sanfen004.me:443, method=chacha20-ietf-poly1305, password=30ba67cf-776c-48be-8bb5-578878830228, aead=true, tls13=false, obfs=wss, obfs-host=www.microsoft.com, obfs-uri=/zh-cn, fast-open=false, udp-relay=true, tag=Relay_🇦🇺AU-🇦🇺AU_1134
+vmess = hk3.af49c4e4c2ef.sanfen004.me:443, method=chacha20-ietf-poly1305, password=30ba67cf-776c-48be-8bb5-578878830228, aead=true, tls13=false, obfs=wss, obfs-host=www.microsoft.com, obfs-uri=/zh-cn, fast-open=false, udp-relay=true, tag=Relay_🇺🇸US-🇺🇸US_1651
+vmess = 51.75.74.253:10000, method=chacha20-ietf-poly1305, password=df05adba-e5fb-11ed-a1bd-5fee106af88d, aead=true, obfs=ws, obfs-host=51.75.74.253, obfs-uri=/vpnjantit, fast-open=false, udp-relay=true, tag=德国_0430031
+trojan = jp2.gsjc.cfd:443, password=362a7af3-9ef9-4a6a-914b-5f85bfb1ef9f, over-tls=true, tls-host=20-212-60-88.nhost.00cdn.com, tls13=false, fast-open=false, udp-relay=true, tls-verification=false, tag=🇯🇵JP-54.178.9.238-15352
+trojan = awsjp6-data.amazon-azure.com:443, password=6d6b76a0-7be8-4935-a284-77d000401d3a, over-tls=true, tls-host=data.amazon-azure.com, tls13=false, fast-open=false, udp-relay=true, tls-verification=false, tag=🇯🇵JP-43.207.100.84-1066
+vmess = 27.124.20.240:44002, method=chacha20-ietf-poly1305, password=418048af-a293-4b99-9b0c-98ca3580dd24, aead=false, fast-open=false, udp-relay=true, tag=🇮🇳_IN_印度_0@6
+trojan = 195.15.243.26:443, password=4478, over-tls=true, tls-host=, tls13=false, fast-open=false, udp-relay=true, tls-verification=false, tag=_21
+vmess = Kansas.kotick.site:443, method=chacha20-ietf-poly1305, password=2F094845-E2BD-EBF7-DEB7-995992436FAF, aead=true, tls13=false, obfs=wss, obfs-host=Kansas.kotick.site, obfs-uri=/speedtest, fast-open=false, udp-relay=true, tag=未知_04302657
+
+[filter_local]
+DOMAIN-SUFFIX,openai.com,📢 ChatGPT
+DOMAIN-SUFFIX,challenges.cloudflare.com,📢 ChatGPT
+DOMAIN-SUFFIX,ai.com,📢 ChatGPT
+DOMAIN-SUFFIX,bard.google.com,📢 Bard
+GEOIP,CN,🎯 国内网站,no-resolve
+FINAL,🐟 其他网站
+
+[rewrite_local]
+
+[mitm]
+
