@@ -1,0 +1,176 @@
+[General]
+allow-udp-proxy=false
+bypass-tun=10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.18.0.0/15,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+dns-server=system,119.29.29.29,223.5.5.5
+host=127.0.0.1
+skip-proxy=192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
+
+[Proxy]
+本文件创建时间：Mon May  1 18:37:37 UTC 2023 = vmess,255.255.255.255,10086,chacha20-ietf-poly1305,"00000000-0000-0000-0000-000000000000",over-tls:false,transport:tcp,skip-cert-verify:1
+🇰🇷KR-43.201.23.76-16786 = ShadowsocksR,playweb.ml,6983,chacha20-ietf,"Hucloud12",origin,{},plain,{}
+🏁RELAY-104.21.63.117-5902 = vmess,104.21.63.117,8080,chacha20-ietf-poly1305,"7d69996f-cb8a-4c67-cbe5-d72a672a0902",over-tls:false,transport:ws,path:/uitsrt,host:eu3-fsn-kvm.uitsrt.me,skip-cert-verify:1
+🏁RELAY-198.41.223.92-0330 = vmess,cf-lt.sharecentre.online,80,chacha20-ietf-poly1305,"2d5d8b9c-8ec4-4a37-b610-78e71e13eaef",over-tls:false,transport:ws,path:/shirker,host:hk-hytron.ilovescp.com,skip-cert-verify:1
+🇮🇳IN-152.70.74.66-0085 = trojan,152.70.74.66,443,d906afe5-7c3c-4ddc-aaa4-61c154a82e5e,skip-cert-verify:1
+🏁RELAY-198.41.223.93-3674 = vmess,cf-lt.sharecentre.online,80,chacha20-ietf-poly1305,"2d5d8b9c-8ec4-4a37-b610-78e71e13eaef",over-tls:false,transport:ws,path:/shirker,host:nl.sharecentrepro.com,skip-cert-verify:1
+🏁RELAY-172.67.250.232-0333 = vmess,cf-lt.sharecentre.online,80,chacha20-ietf-poly1305,"2d5d8b9c-8ec4-4a37-b610-78e71e13eaef",over-tls:false,transport:ws,path:/shirker,host:ny1.sharecentrepro.org,skip-cert-verify:1
+🏁RELAY-198.41.223.81-0327 = vmess,cf-lt.sharecentre.online,80,chacha20-ietf-poly1305,"2d5d8b9c-8ec4-4a37-b610-78e71e13eaef",over-tls:false,transport:ws,path:/shirker,host:ca.ilovescp.com,skip-cert-verify:1
+github.com/freefq - 美国CloudFlare公司CDN节点 4 = vmess,quiz.vidio.com,443,chacha20-ietf-poly1305,"92869d41-a98a-40ba-b79d-2eeb7ffe2433",over-tls:true,tls-name:dynamic-sg1b.obfs.xyz,transport:ws,path:/,host:dynamic-sg1b.obfs.xyz,skip-cert-verify:1
+Relay_🇺🇸US-🇺🇸US_209 = vmess,hk3.af49c4e4c2ef.sanfen004.me,443,chacha20-ietf-poly1305,"a316207e-0d3b-4754-ae9f-a4ec13aacba9",over-tls:true,tls-name:hk3.af49c4e4c2ef.sanfen004.me,transport:ws,path:/zh-cn,host:hk3.af49c4e4c2ef.sanfen004.me,skip-cert-verify:1
+🏁RELAY-172.67.250.232-0340 = vmess,cf-lt.sharecentre.online,80,chacha20-ietf-poly1305,"2d5d8b9c-8ec4-4a37-b610-78e71e13eaef",over-tls:false,transport:ws,path:/shirker,host:dp4.scproxy.top,skip-cert-verify:1
+🏁RELAY-172.67.55.183-0332 = vmess,cf-lt.sharecentre.online,80,chacha20-ietf-poly1305,"2d5d8b9c-8ec4-4a37-b610-78e71e13eaef",over-tls:false,transport:ws,path:/shirker,host:uk1.scproxy.top,skip-cert-verify:1
+🏁RELAY-172.67.250.232-0329 = vmess,cf-lt.sharecentre.online,80,chacha20-ietf-poly1305,"2d5d8b9c-8ec4-4a37-b610-78e71e13eaef",over-tls:false,transport:ws,path:/shirker,host:hk2.ilovescp.com,skip-cert-verify:1
+🏁RELAY-172.67.250.232-0338 = vmess,cf-lt.sharecentre.online,80,chacha20-ietf-poly1305,"2d5d8b9c-8ec4-4a37-b610-78e71e13eaef",over-tls:false,transport:ws,path:/shirker,host:dp2.scproxy.top,skip-cert-verify:1
+🏁RELAY-198.41.223.76-0335 = vmess,cf-lt.sharecentre.online,80,chacha20-ietf-poly1305,"2d5d8b9c-8ec4-4a37-b610-78e71e13eaef",over-tls:false,transport:ws,path:/shirker,host:lv2.sharecentrepro.org,skip-cert-verify:1
+🇯🇵JP-43.207.221.50-2669 = trojan,fscus.fscloud123456789.com,443,88f914ee-f773-4075-9ddc-9d4763edf13b,skip-cert-verify:1
+🏁RELAY-172.67.80.172-0337 = vmess,cf-lt.sharecentre.online,80,chacha20-ietf-poly1305,"2d5d8b9c-8ec4-4a37-b610-78e71e13eaef",over-tls:false,transport:ws,path:/shirker,host:dp1.scproxy.top,skip-cert-verify:1
+🇺🇸US-148.59.74.240-0144 = trojan,148.59.74.240,443,f494cf87-7b7e-4869-90dd-d488db279329,tls-name:20-212-60-88.nhost.00cdn.com,skip-cert-verify:1
+🇺🇸US-169.197.142.187-4111 = Shadowsocks,169.197.142.187,5003,aes-256-gcm,"g5MeD6Ft3CWlJId"
+🏁RELAY-104.26.15.53-0326 = vmess,r2wind.com,8080,chacha20-ietf-poly1305,"e2952737-6f10-492b-9813-19131deb71b1",over-tls:false,transport:ws,path:/api/v3/download.getFile,host:ssrsub.v03.ssrsub.com,skip-cert-verify:1
+伊朗_0501079 = vmess,snappfood.ir,80,chacha20-ietf-poly1305,"bddb88a3-9d95-4c83-b084-7f153751d594",over-tls:false,transport:ws,path:/,host:dayz-gone.website,skip-cert-verify:1
+🇺🇸US-169.197.142.187-4221 = Shadowsocks,169.197.142.187,6379,aes-256-gcm,"zDNVedRFPQexG9v"
+伊朗_0501077 = vmess,snappfood.ir,80,chacha20-ietf-poly1305,"07b02490-dac8-446a-c0e1-54259e2800af",over-tls:false,transport:ws,path:/,host:dash.dayz-gone.website,skip-cert-verify:1
+伊朗_0501076 = vmess,snappfood.ir,80,chacha20-ietf-poly1305,"67ad27ee-8f2e-408e-d530-a82fd8c6aea1",over-tls:false,transport:ws,path:/,host:dash.dayz-gone.website,skip-cert-verify:1
+伊朗_0501062 = vmess,snappfood.ir,80,chacha20-ietf-poly1305,"61debba4-3eb9-4066-8ccb-be07281c054c",over-tls:false,transport:ws,path:/,host:dash.dayz-gone.website,skip-cert-verify:1
+伊朗_0501060 = vmess,snappfood.ir,80,chacha20-ietf-poly1305,"09bbebf0-70ed-4104-84af-38ac57cc65da",over-tls:false,transport:ws,path:/,host:dayz-gone.website,skip-cert-verify:1
+伊朗_0501059 = vmess,snappfood.ir,80,chacha20-ietf-poly1305,"31fa4e52-4925-4099-8035-bd065ab7dfae",over-tls:false,transport:ws,path:/,host:dash.dayz-gone.website,skip-cert-verify:1
+伊朗_0501081 = vmess,snappfood.ir,80,chacha20-ietf-poly1305,"dc26e87e-f702-4dc4-c60c-b7b779034fad",over-tls:false,transport:ws,path:/,host:dash.dayz-gone.website,skip-cert-verify:1
+伊朗_0501056 = vmess,snappfood.ir,80,chacha20-ietf-poly1305,"5f3f0601-194e-4613-cc9c-323625813606",over-tls:false,transport:ws,path:/,host:dayz-gone.website,skip-cert-verify:1
+伊朗_0501078 = vmess,snappfood.ir,80,chacha20-ietf-poly1305,"b5142cb3-93c2-49de-e54b-44252669427d",over-tls:false,transport:ws,path:/,host:dayz-gone.website,skip-cert-verify:1
+🇺🇸US-169.197.142.187-4307 = Shadowsocks,169.197.142.187,7306,aes-256-gcm,"FoOiGlkAA9yPEGP"
+伊朗_0501061 = vmess,snappfood.ir,80,chacha20-ietf-poly1305,"79371ca7-ac09-4f19-a477-1098aea70421",over-tls:false,transport:ws,path:/,host:dash.dayz-gone.website,skip-cert-verify:1
+伊朗_0501084 = vmess,snappfood.ir,80,chacha20-ietf-poly1305,"6ce850d5-5a25-4675-9495-50313c9d0fae",over-tls:false,transport:ws,path:/,host:dayz-gone.website,skip-cert-verify:1
+伊朗_0501083 = vmess,snappfood.ir,80,chacha20-ietf-poly1305,"70ae277f-2b7d-4599-9f75-abc7e8168f9b",over-tls:false,transport:ws,path:/,host:dash.dayz-gone.website,skip-cert-verify:1
+伊朗_0501055 = vmess,snappfood.ir,80,chacha20-ietf-poly1305,"2fa21754-82e6-47b9-c609-6db5e3884057",over-tls:false,transport:ws,path:/,host:dayz-gone.website,skip-cert-verify:1
+🇺🇸US-38.91.101.159-15898 = Shadowsocks,38.91.101.159,9101,aes-256-gcm,"e4FCWrgpkji3QY"
+🇺🇸US-38.91.101.159-4093 = Shadowsocks,38.91.101.159,9102,aes-256-gcm,"e4FCWrgpkji3QY"
+🇺🇸US-38.91.101.159-4091 = Shadowsocks,38.91.101.159,3389,aes-256-gcm,"Y6R9pAtvxxzmGC"
+🇺🇸US-38.91.101.159-15923 = Shadowsocks,38.91.101.159,7306,aes-256-gcm,"FoOiGlkAA9yPEGP"
+🇺🇸US-38.91.101.159-15211 = Shadowsocks,38.91.101.159,5004,aes-256-gcm,"g5MeD6Ft3CWlJId"
+🇺🇸US-38.91.101.159-4105 = Shadowsocks,38.91.101.159,8090,aes-256-gcm,"PCnnH6SQSnfoS27"
+🇺🇸US-38.91.101.159-4092 = Shadowsocks,38.91.101.159,8881,aes-256-gcm,"kDWvXYZoTBcGkC4"
+🇺🇸US-38.91.101.159-4095 = Shadowsocks,38.91.101.159,6679,aes-256-gcm,"TEzjfAYq2IjtuoS"
+🇺🇸US-169.197.142.187-4308 = Shadowsocks,169.197.142.187,7307,aes-256-gcm,"FoOiGlkAA9yPEGP"
+🇺🇸US-169.197.142.187-4255 = Shadowsocks,169.197.142.187,5001,aes-256-gcm,"Y6R9pAtvxxzmGC"
+🇺🇸US-38.91.101.159-15231 = Shadowsocks,38.91.101.159,2375,aes-256-gcm,"faBAoD54k87UJG7"
+🏁RELAY-198.41.223.81-0325 = vmess,cf-lt.sharecentre.online,8080,chacha20-ietf-poly1305,"e2952737-6f10-492b-9813-19131deb71b1",over-tls:false,transport:ws,path:/api/v3/download.getFile,host:ssrsub.v03.ssrsub.com,skip-cert-verify:1
+🇫🇷FR-54.36.115.241-4056 = Shadowsocks,54.36.115.241,989,aes-256-cfb,"f8f7aCzcPKbsF8p3"
+🏁RELAY-172.67.250.232-0339 = vmess,cf-lt.sharecentre.online,80,chacha20-ietf-poly1305,"2d5d8b9c-8ec4-4a37-b610-78e71e13eaef",over-tls:false,transport:ws,path:/shirker,host:dp3.scproxy.top,skip-cert-verify:1
+🇺🇸US-38.91.101.159-4238 = Shadowsocks,38.91.101.159,5003,aes-256-gcm,"g5MeD6Ft3CWlJId"
+🇩🇪DE-78.47.92.139-1902 = trojan,stonebreak.online,443,xl87654321,skip-cert-verify:1
+🇸🇬SG-18.142.44.79-6032 = Shadowsocks,18.142.44.79,443,aes-256-cfb,"amazonskr05"
+香港【付费推荐：https://v1.mk/vip】27 = vmess,n1682824497.edpmvga.cn,443,chacha20-ietf-poly1305,"6d8dca87-bce8-417a-9bc5-120906b5fe42",over-tls:true,tls-name:n1682824497.edpmvga.cn,transport:ws,path:/,host:n1682824497.edpmvga.cn,skip-cert-verify:1
+🇨🇳CN-120.198.71.162-3290 = ShadowsocksR,layercm05.initcloud.pro,560,chacha20-ietf,"mblank1port",auth_aes128_md5,{48530:LLLiuiuiu787878},plain,{}
+🏁RELAY-172.67.55.183-0336 = vmess,cf-lt.sharecentre.online,80,chacha20-ietf-poly1305,"2d5d8b9c-8ec4-4a37-b610-78e71e13eaef",over-tls:false,transport:ws,path:/shirker,host:lv3.sharecentrepro.org,skip-cert-verify:1
+🇫🇷FR-146.59.15.243-16171 = vmess,pl1-vmess.greenssh.xyz,80,chacha20-ietf-poly1305,"2b3ec40f-1dfc-4893-b739-c94e2fe46015",over-tls:false,transport:ws,path:/,host:pl1-vmess.greenssh.xyz,skip-cert-verify:1
+香港【付费推荐：https://v1.mk/vip】26 = vmess,n1682393185.edpmvga.cn,443,chacha20-ietf-poly1305,"8ee9fa88-29b9-4f66-a044-611a091e24ff",over-tls:true,tls-name:n1682393185.edpmvga.cn,transport:ws,path:/,host:n1682393185.edpmvga.cn,skip-cert-verify:1
+🇫🇷FR-146.59.15.243-5705 = vmess,pl1-vmess.greenssh.xyz,80,chacha20-ietf-poly1305,"2b3ec40f-1dfc-4893-b739-c94e2fe46015",over-tls:false,transport:ws,path:/vmess,host:pl1-vmess.greenssh.xyz,skip-cert-verify:1
+🇨🇾CY-213.169.137.221-4055 = Shadowsocks,213.169.137.221,989,aes-256-cfb,"f8f7aCzcPKbsF8p3"
+🇸🇬SG-51.79.222.99-0122 = ShadowsocksR,51.79.222.99,443,aes-256-ctr,"bypasser2020qwerty",origin,{},tls1.2_ticket_auth,{}
+🇭🇰HK-103.20.223.4-1177 = trojan,cn-hk-package.hyperlinkvpn.xyz,50180,ba5305d8-bf3e-4eee-8ebf-1c7b9a6dbed2,skip-cert-verify:1
+🏁RELAY-172.67.80.172-6093 = vmess,cf-lt.sharecentre.online,80,chacha20-ietf-poly1305,"2d5d8b9c-8ec4-4a37-b610-78e71e13eaef",over-tls:false,transport:ws,path:/shirker,host:fr.scproxy.top,skip-cert-verify:1
+🇨🇳CN-120.232.186.25-5952 = Shadowsocks,a.gfw.services,64739,chacha20-ietf-poly1305,"abc9a8de-024e-42ea-b1f3-b9ea7a85f9ed"
+🇭🇰HK-103.20.223.4-0072 = trojan,103.20.223.4,50180,ba5305d8-bf3e-4eee-8ebf-1c7b9a6dbed2,skip-cert-verify:1
+_21 = trojan,195.15.243.26,443,4478,skip-cert-verify:1
+🇮🇲IM-37.235.55.21-4066 = Shadowsocks,37.235.55.21,989,aes-256-cfb,"f8f7aCzcPKbsF8p3"
+🇭🇷HR-46.183.184.60-4063 = Shadowsocks,46.183.184.60,989,aes-256-cfb,"f8f7aCzcPKbsF8p3"
+🇿🇦ZA-41.203.4.34-4086 = Shadowsocks,41.203.4.34,989,aes-256-cfb,"f8f7aCzcPKbsF8p3"
+🇳🇬NG-185.255.123.90-4076 = Shadowsocks,185.255.123.90,989,aes-256-cfb,"f8f7aCzcPKbsF8p3"
+🇨🇳CN-223.113.141.179-1000 = vmess,v6.heduian.online,30866,chacha20-ietf-poly1305,"cbb3f877-d1fb-344c-87a9-d153bffd5484",over-tls:false,transport:ws,path:/oooo,host:v6.heduian.online,skip-cert-verify:1
+
+[Remote Proxy]
+
+[Proxy Group]
+🚀 节点选择 = select,♻️ 自动选择,♻️ IPv6,🚀 手动切换-1,🚀 手动切换-2,🎥 流媒体解锁,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇷🇺 俄罗斯节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇧🇷 巴西节点,🇪🇬 埃及节点,DIRECT,REJECT
+♻️ 自动选择 = url-test,本文件创建时间：Mon May  1 18:37:37 UTC 2023,🇰🇷KR-43.201.23.76-16786,🏁RELAY-104.21.63.117-5902,🏁RELAY-198.41.223.92-0330,🇮🇳IN-152.70.74.66-0085,🏁RELAY-198.41.223.93-3674,🏁RELAY-172.67.250.232-0333,🏁RELAY-198.41.223.81-0327,github.com/freefq - 美国CloudFlare公司CDN节点 4,Relay_🇺🇸US-🇺🇸US_209,🏁RELAY-172.67.250.232-0340,🏁RELAY-172.67.55.183-0332,🏁RELAY-172.67.250.232-0329,🏁RELAY-172.67.250.232-0338,🏁RELAY-198.41.223.76-0335,🇯🇵JP-43.207.221.50-2669,🏁RELAY-172.67.80.172-0337,🇺🇸US-148.59.74.240-0144,🇺🇸US-169.197.142.187-4111,🏁RELAY-104.26.15.53-0326,伊朗_0501079,🇺🇸US-169.197.142.187-4221,伊朗_0501077,伊朗_0501076,伊朗_0501062,伊朗_0501060,伊朗_0501059,伊朗_0501081,伊朗_0501056,伊朗_0501078,🇺🇸US-169.197.142.187-4307,伊朗_0501061,伊朗_0501084,伊朗_0501083,伊朗_0501055,🇺🇸US-38.91.101.159-15898,🇺🇸US-38.91.101.159-4093,🇺🇸US-38.91.101.159-4091,🇺🇸US-38.91.101.159-15923,🇺🇸US-38.91.101.159-15211,🇺🇸US-38.91.101.159-4105,🇺🇸US-38.91.101.159-4092,🇺🇸US-38.91.101.159-4095,🇺🇸US-169.197.142.187-4308,🇺🇸US-169.197.142.187-4255,🇺🇸US-38.91.101.159-15231,🏁RELAY-198.41.223.81-0325,🇫🇷FR-54.36.115.241-4056,🏁RELAY-172.67.250.232-0339,🇺🇸US-38.91.101.159-4238,🇩🇪DE-78.47.92.139-1902,🇸🇬SG-18.142.44.79-6032,香港【付费推荐：https://v1.mk/vip】27,🇨🇳CN-120.198.71.162-3290,🏁RELAY-172.67.55.183-0336,🇫🇷FR-146.59.15.243-16171,香港【付费推荐：https://v1.mk/vip】26,🇫🇷FR-146.59.15.243-5705,🇨🇾CY-213.169.137.221-4055,🇸🇬SG-51.79.222.99-0122,🇭🇰HK-103.20.223.4-1177,🏁RELAY-172.67.80.172-6093,🇨🇳CN-120.232.186.25-5952,🇭🇰HK-103.20.223.4-0072,_21,🇮🇲IM-37.235.55.21-4066,🇭🇷HR-46.183.184.60-4063,🇿🇦ZA-41.203.4.34-4086,🇳🇬NG-185.255.123.90-4076,🇨🇳CN-223.113.141.179-1000,url=https://www.google.com/generate_204,interval=300
+♻️ IPv6 = url-test,🏁RELAY-198.41.223.81-0327,github.com/freefq - 美国CloudFlare公司CDN节点 4,🏁RELAY-172.67.250.232-0340,🏁RELAY-172.67.250.232-0338,🇯🇵JP-43.207.221.50-2669,🇩🇪DE-78.47.92.139-1902,_21,🇨🇳CN-223.113.141.179-1000,url=https://www.google.com/generate_204,interval=300
+🚀 手动切换-1 = select,本文件创建时间：Mon May  1 18:37:37 UTC 2023,🇰🇷KR-43.201.23.76-16786,🏁RELAY-104.21.63.117-5902,🏁RELAY-198.41.223.92-0330,🇮🇳IN-152.70.74.66-0085,🏁RELAY-198.41.223.93-3674,🏁RELAY-172.67.250.232-0333,🏁RELAY-198.41.223.81-0327,github.com/freefq - 美国CloudFlare公司CDN节点 4,Relay_🇺🇸US-🇺🇸US_209,🏁RELAY-172.67.250.232-0340,🏁RELAY-172.67.55.183-0332,🏁RELAY-172.67.250.232-0329,🏁RELAY-172.67.250.232-0338,🏁RELAY-198.41.223.76-0335,🇯🇵JP-43.207.221.50-2669,🏁RELAY-172.67.80.172-0337,🇺🇸US-148.59.74.240-0144,🇺🇸US-169.197.142.187-4111,🏁RELAY-104.26.15.53-0326,伊朗_0501079,🇺🇸US-169.197.142.187-4221,伊朗_0501077,伊朗_0501076,伊朗_0501062,伊朗_0501060,伊朗_0501059,伊朗_0501081,伊朗_0501056,伊朗_0501078,🇺🇸US-169.197.142.187-4307,伊朗_0501061,伊朗_0501084,伊朗_0501083,伊朗_0501055,🇺🇸US-38.91.101.159-15898,🇺🇸US-38.91.101.159-4093,🇺🇸US-38.91.101.159-4091,🇺🇸US-38.91.101.159-15923,🇺🇸US-38.91.101.159-15211,🇺🇸US-38.91.101.159-4105,🇺🇸US-38.91.101.159-4092,🇺🇸US-38.91.101.159-4095,🇺🇸US-169.197.142.187-4308,🇺🇸US-169.197.142.187-4255,🇺🇸US-38.91.101.159-15231,🏁RELAY-198.41.223.81-0325,🇫🇷FR-54.36.115.241-4056,🏁RELAY-172.67.250.232-0339,🇺🇸US-38.91.101.159-4238,🇩🇪DE-78.47.92.139-1902,🇸🇬SG-18.142.44.79-6032,香港【付费推荐：https://v1.mk/vip】27,🇨🇳CN-120.198.71.162-3290,🏁RELAY-172.67.55.183-0336,🇫🇷FR-146.59.15.243-16171,香港【付费推荐：https://v1.mk/vip】26,🇫🇷FR-146.59.15.243-5705,🇨🇾CY-213.169.137.221-4055,🇸🇬SG-51.79.222.99-0122,🇭🇰HK-103.20.223.4-1177,🏁RELAY-172.67.80.172-6093,🇨🇳CN-120.232.186.25-5952,🇭🇰HK-103.20.223.4-0072,_21,🇮🇲IM-37.235.55.21-4066,🇭🇷HR-46.183.184.60-4063,🇿🇦ZA-41.203.4.34-4086,🇳🇬NG-185.255.123.90-4076,🇨🇳CN-223.113.141.179-1000
+🚀 手动切换-2 = select,本文件创建时间：Mon May  1 18:37:37 UTC 2023,🇰🇷KR-43.201.23.76-16786,🏁RELAY-104.21.63.117-5902,🏁RELAY-198.41.223.92-0330,🇮🇳IN-152.70.74.66-0085,🏁RELAY-198.41.223.93-3674,🏁RELAY-172.67.250.232-0333,🏁RELAY-198.41.223.81-0327,github.com/freefq - 美国CloudFlare公司CDN节点 4,Relay_🇺🇸US-🇺🇸US_209,🏁RELAY-172.67.250.232-0340,🏁RELAY-172.67.55.183-0332,🏁RELAY-172.67.250.232-0329,🏁RELAY-172.67.250.232-0338,🏁RELAY-198.41.223.76-0335,🇯🇵JP-43.207.221.50-2669,🏁RELAY-172.67.80.172-0337,🇺🇸US-148.59.74.240-0144,🇺🇸US-169.197.142.187-4111,🏁RELAY-104.26.15.53-0326,伊朗_0501079,🇺🇸US-169.197.142.187-4221,伊朗_0501077,伊朗_0501076,伊朗_0501062,伊朗_0501060,伊朗_0501059,伊朗_0501081,伊朗_0501056,伊朗_0501078,🇺🇸US-169.197.142.187-4307,伊朗_0501061,伊朗_0501084,伊朗_0501083,伊朗_0501055,🇺🇸US-38.91.101.159-15898,🇺🇸US-38.91.101.159-4093,🇺🇸US-38.91.101.159-4091,🇺🇸US-38.91.101.159-15923,🇺🇸US-38.91.101.159-15211,🇺🇸US-38.91.101.159-4105,🇺🇸US-38.91.101.159-4092,🇺🇸US-38.91.101.159-4095,🇺🇸US-169.197.142.187-4308,🇺🇸US-169.197.142.187-4255,🇺🇸US-38.91.101.159-15231,🏁RELAY-198.41.223.81-0325,🇫🇷FR-54.36.115.241-4056,🏁RELAY-172.67.250.232-0339,🇺🇸US-38.91.101.159-4238,🇩🇪DE-78.47.92.139-1902,🇸🇬SG-18.142.44.79-6032,香港【付费推荐：https://v1.mk/vip】27,🇨🇳CN-120.198.71.162-3290,🏁RELAY-172.67.55.183-0336,🇫🇷FR-146.59.15.243-16171,香港【付费推荐：https://v1.mk/vip】26,🇫🇷FR-146.59.15.243-5705,🇨🇾CY-213.169.137.221-4055,🇸🇬SG-51.79.222.99-0122,🇭🇰HK-103.20.223.4-1177,🏁RELAY-172.67.80.172-6093,🇨🇳CN-120.232.186.25-5952,🇭🇰HK-103.20.223.4-0072,_21,🇮🇲IM-37.235.55.21-4066,🇭🇷HR-46.183.184.60-4063,🇿🇦ZA-41.203.4.34-4086,🇳🇬NG-185.255.123.90-4076,🇨🇳CN-223.113.141.179-1000
+🛑 广告拦截 = select,DIRECT,REJECT
+📢 ChatGPT = select,🚀 节点选择,♻️ 自动选择,🚀 手动切换-1,🚀 手动切换-2,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇷🇺 俄罗斯节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇧🇷 巴西节点,🇪🇬 埃及节点,DIRECT,REJECT
+📢 Bard = select,🚀 节点选择,♻️ 自动选择,🚀 手动切换-1,🚀 手动切换-2,🇺🇸 美国节点,🇬🇧 英国节点,DIRECT,REJECT
+Ⓜ️ NewBing = select,🚀 节点选择,♻️ 自动选择,🚀 手动切换-1,🚀 手动切换-2,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇷🇺 俄罗斯节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇧🇷 巴西节点,🇪🇬 埃及节点,DIRECT,REJECT
+Ⓜ️ 微软服务 = select,DIRECT,🚀 节点选择,♻️ 自动选择,♻️ IPv6,🚀 手动切换-1,🚀 手动切换-2,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇷🇺 俄罗斯节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇧🇷 巴西节点,🇪🇬 埃及节点,REJECT
+🍎 苹果服务 = select,DIRECT,🚀 节点选择,♻️ 自动选择,♻️ IPv6,🚀 手动切换-1,🚀 手动切换-2,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇷🇺 俄罗斯节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇧🇷 巴西节点,🇪🇬 埃及节点,REJECT
+🎮 国际游戏 = select,DIRECT,🚀 节点选择,♻️ 自动选择,♻️ IPv6,🚀 手动切换-1,🚀 手动切换-2,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇷🇺 俄罗斯节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇧🇷 巴西节点,🇪🇬 埃及节点,REJECT
+🌍 国外媒体 = select,🚀 节点选择,♻️ 自动选择,♻️ IPv6,🚀 手动切换-1,🚀 手动切换-2,🎥 流媒体解锁,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇷🇺 俄罗斯节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇧🇷 巴西节点,🇪🇬 埃及节点,DIRECT,REJECT
+🌏 国内媒体 = select,DIRECT,🚀 节点选择,♻️ 自动选择,♻️ IPv6,🚀 手动切换-1,🚀 手动切换-2,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇷🇺 俄罗斯节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇧🇷 巴西节点,🇪🇬 埃及节点,REJECT
+🎯 国内网站 = select,DIRECT,🚀 节点选择,♻️ 自动选择,♻️ IPv6,🚀 手动切换-1,🚀 手动切换-2,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇷🇺 俄罗斯节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇧🇷 巴西节点,🇪🇬 埃及节点,REJECT
+🐟 其他网站 = select,DIRECT,🚀 节点选择,♻️ 自动选择,♻️ IPv6,🚀 手动切换-1,🚀 手动切换-2,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇷🇺 俄罗斯节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇧🇷 巴西节点,🇪🇬 埃及节点,REJECT
+🎥 流媒体解锁 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+👍 高级节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+📺 省流节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇨🇳 大陆节点 = url-test,🇨🇳CN-120.198.71.162-3290,🇨🇳CN-120.232.186.25-5952,🇨🇳CN-223.113.141.179-1000,url=https://www.google.com/generate_204,interval=300
+🇭🇰 香港节点 = url-test,香港【付费推荐：https://v1.mk/vip】27,香港【付费推荐：https://v1.mk/vip】26,🇭🇰HK-103.20.223.4-1177,🇭🇰HK-103.20.223.4-0072,url=https://www.google.com/generate_204,interval=300
+🇲🇴 澳门节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇹🇼 台湾节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇸🇬 新加坡节点 = url-test,🇸🇬SG-18.142.44.79-6032,🇸🇬SG-51.79.222.99-0122,url=https://www.google.com/generate_204,interval=300
+🇯🇵 日本节点 = url-test,🇯🇵JP-43.207.221.50-2669,url=https://www.google.com/generate_204,interval=300
+🇰🇷 韩国节点 = url-test,🇰🇷KR-43.201.23.76-16786,url=https://www.google.com/generate_204,interval=300
+🇲🇾 马来西亚节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇹🇭 泰国节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇻🇳 越南节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇰🇭 柬埔寨节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇮🇩 印度尼西亚节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇵🇭 菲律宾节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇮🇳 印度节点 = url-test,🇮🇳IN-152.70.74.66-0085,url=https://www.google.com/generate_204,interval=300
+🇹🇷 土耳其节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇦🇺 澳大利亚节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇳🇿 新西兰节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇨🇦 加拿大节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇷🇺 俄罗斯节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇺🇸 美国节点 = url-test,github.com/freefq - 美国CloudFlare公司CDN节点 4,Relay_🇺🇸US-🇺🇸US_209,🇺🇸US-148.59.74.240-0144,🇺🇸US-169.197.142.187-4111,🇺🇸US-169.197.142.187-4221,🇺🇸US-169.197.142.187-4307,🇺🇸US-38.91.101.159-15898,🇺🇸US-38.91.101.159-4093,🇺🇸US-38.91.101.159-4091,🇺🇸US-38.91.101.159-15923,🇺🇸US-38.91.101.159-15211,🇺🇸US-38.91.101.159-4105,🇺🇸US-38.91.101.159-4092,🇺🇸US-38.91.101.159-4095,🇺🇸US-169.197.142.187-4308,🇺🇸US-169.197.142.187-4255,🇺🇸US-38.91.101.159-15231,🇺🇸US-38.91.101.159-4238,url=https://www.google.com/generate_204,interval=300
+🇬🇧 英国节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇫🇷 法国节点 = url-test,🇫🇷FR-54.36.115.241-4056,🇫🇷FR-146.59.15.243-16171,🇫🇷FR-146.59.15.243-5705,url=https://www.google.com/generate_204,interval=300
+🇩🇪 德国节点 = url-test,🇩🇪DE-78.47.92.139-1902,url=https://www.google.com/generate_204,interval=300
+🇵🇱 波兰节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇩🇰 丹麦节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇳🇴 挪威节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇸🇪 瑞典节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇫🇮 芬兰节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇮🇸 冰岛节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇨🇭 瑞士节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇬🇷 希腊节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇳🇱 荷兰节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇧🇷 巴西节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+🇪🇬 埃及节点 = url-test,DIRECT,url=https://www.google.com/generate_204,interval=300
+
+[Rule]
+DOMAIN-SUFFIX,openai.com,📢 ChatGPT
+DOMAIN-SUFFIX,challenges.cloudflare.com,📢 ChatGPT
+DOMAIN-SUFFIX,ai.com,📢 ChatGPT
+DOMAIN-SUFFIX,bard.google.com,📢 Bard
+GEOIP,CN,🎯 国内网站,no-resolve
+FINAL,🐟 其他网站
+
+[Remote Rule]
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/BanAD.list,🛑 广告拦截
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/BanProgramAD.list,🛑 广告拦截
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/Bing.list,Ⓜ️ NewBing
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/Microsoft.list,Ⓜ️ 微软服务
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/Apple.list,🍎 苹果服务
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/Game.list,🎮 国际游戏
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/ProxyMedia.list,🌍 国外媒体
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/ChinaMedia.list,🌏 国内媒体
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/ProxyGFWlist.list,🚀 节点选择
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/LocalAreaNetwork.list,🎯 国内网站
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/UnBan.list,🎯 国内网站
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/ChinaDomain.list,🎯 国内网站
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/ChinaCompanyIp.list,🎯 国内网站
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/ChinaIp.list,🎯 国内网站
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/GoogleCN.list,🎯 国内网站
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/SteamCN.list,🎯 国内网站
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/Download.list,🎯 国内网站
+https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/Direct.list,🎯 国内网站
+
+[URL Rewrite]
+enable=true
+^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+
+[Remote Rewrite]
+https://raw.githubusercontent.com/thuhollow2/rule/main/Loon/AutoRewrite_Example.list,auto
+
+[MITM]
+enable=true
+hostname=*.example.com,*.sample.com
+skip-server-cert-verify=true
+
