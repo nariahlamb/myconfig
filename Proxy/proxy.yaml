@@ -1,8 +1,0 @@
-proxies:
-  - {name: 本文件创建时间：Tue May 16 00:29:46 UTC 2023, server: 255.255.255.255, port: 10086, type: vmess, uuid: 00000000-0000-0000-0000-000000000000, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇨🇳CN-123.249.101.15-19709, server: 123.249.101.15, port: 19709, client-fingerprint: chrome, type: vmess, uuid: 2f278a45-940a-46c1-c886-77f3b2d33987, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇨🇳CN-36.134.16.190-11023, server: 36.134.16.190, port: 11023, client-fingerprint: chrome, type: vmess, uuid: 8c042a38-71c1-1dcb-00df-54880236e0dc, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: true, udp: true}
-  - {name: 🇨🇳CN-47.93.231.218-53022, server: 47.93.231.218, port: 53022, client-fingerprint: chrome, type: vmess, uuid: 95fd7642-2160-4528-e909-3d526b533013, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇪🇬EG-41.215.242.178-989, server: 41.215.242.180, port: 989, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, tfo: false, udp: true}
-  - {name: 🇮🇪IE-23.92.127.133-989, server: 23.92.127.134, port: 989, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, tfo: false, udp: true}
-  - {name: 🇵🇱PL-217.182.76.202-80, server: pl2-vmess.greenssh.xyz, port: 80, client-fingerprint: chrome, type: vmess, uuid: 7487c25a-e899-44d8-9d71-8b9ab4ff5d26, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: pl2-vmess.greenssh.xyz}}, udp: true}
