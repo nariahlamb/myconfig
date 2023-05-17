@@ -1,0 +1,121 @@
+#!MANAGED-CONFIG https://raw.githubusercontent.com/thuhollow2/myconfig/main/Surge4/surge4config.yaml interval=86400 strict=false
+
+[General]
+loglevel = notify
+bypass-system = true
+skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,e.crashlytics.com,captive.apple.com,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
+#DNS设置或根据自己网络情况进行相应设置
+bypass-tun = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12
+dns-server = 119.29.29.29,223.5.5.5
+
+[Proxy]
+DIRECT = direct
+本文件创建时间：Mon May 15 00:27:26 UTC 2023 = vmess, 255.255.255.255, 10086, username=00000000-0000-0000-0000-000000000000, tls=false, vmess-aead=true, skip-cert-verify=true, tfo=false, udp-relay=true
+🇮🇳IN-152.70.74.66-443 = trojan, 152.70.74.66, 443, password=d906afe5-7c3c-4ddc-aaa4-61c154a82e5e, skip-cert-verify=true, tfo=false, udp-relay=true
+🇯🇵JP-18.179.52.115-28785 = vmess, jp06-vm0.entry.jpojpoh.art, 28785, username=22acc467-7440-386a-927a-d84be554b37e, tls=true, vmess-aead=false, tls13=false, skip-cert-verify=true, tfo=false, udp-relay=true
+🇺🇸US-209.141.60.31-43500 = trojan, streaming.teacher2040.com, 43500, password=D44B7434-927C-AE52-D51F-A790C19ED74A, skip-cert-verify=true, tfo=false, udp-relay=true
+🇸🇬SG-13.215.177.20-443 = trojan, 13.215.177.20, 443, password=794d739c-89a0-444c-b2e7-acce12af3042, sni=data.amazon-azure.com, skip-cert-verify=true, tfo=false, udp-relay=true
+🇺🇸US-135.148.149.209-80 = trojan, us2.trojanvh.xyz, 80, password=011eb011-c68e-4f92-80eb-f9bbef707bef, skip-cert-verify=true, tfo=false, udp-relay=true
+🇸🇬SG-13.215.194.103-443 = trojan, 13.215.194.103, 443, password=4aeda200-44c9-4168-8f2a-a00a72176d35, sni=data.amazon-azure.com, skip-cert-verify=true, tfo=false, udp-relay=true
+🇸🇬SG-13.215.252.181-443 = trojan, awssg18-data.amazon-azure.com, 443, password=4aeda200-44c9-4168-8f2a-a00a72176d35, sni=data.amazon-azure.com, skip-cert-verify=true, tfo=false, udp-relay=true
+🇸🇬SG-13.215.159.48-443 = trojan, awssg16-data.amazon-azure.com, 443, password=4aeda200-44c9-4168-8f2a-a00a72176d35, sni=data.amazon-azure.com, skip-cert-verify=true, tfo=false, udp-relay=true
+🇺🇸US-137.175.6.6-443 = vmess, 23.227.38.99, 443, username=86d37526-5758-4cec-862f-df404b313086, tls=true, vmess-aead=true, tls13=false, ws=true, ws-path=/3G6WPDL7, sni=23.227.38.99, ws-headers=Host:1.freek1.xyz, skip-cert-verify=true, tfo=false, udp-relay=true
+🎥 流媒体解锁 = direct
+👍 高级节点 = direct
+📺 省流节点 = direct
+🇨🇳 大陆节点 = direct
+🇭🇰 香港节点 = direct
+🇲🇴 澳门节点 = direct
+🇹🇼 台湾节点 = direct
+🇰🇷 韩国节点 = direct
+🇲🇾 马来西亚节点 = direct
+🇹🇭 泰国节点 = direct
+🇻🇳 越南节点 = direct
+🇰🇭 柬埔寨节点 = direct
+🇮🇩 印度尼西亚节点 = direct
+🇵🇭 菲律宾节点 = direct
+🇲🇳 蒙古节点 = direct
+🇮🇷 伊朗节点 = direct
+🇹🇷 土耳其节点 = direct
+🇮🇱 以色列节点 = direct
+🇸🇦 沙特阿拉伯节点 = direct
+🇦🇺 澳大利亚节点 = direct
+🇳🇿 新西兰节点 = direct
+🇨🇦 加拿大节点 = direct
+🇲🇽 墨西哥节点 = direct
+🇵🇦 巴拿马节点 = direct
+🇷🇺 俄罗斯节点 = direct
+🇺🇦 乌克兰节点 = direct
+🇬🇧 英国节点 = direct
+🇫🇷 法国节点 = direct
+🇩🇪 德国节点 = direct
+🇵🇱 波兰节点 = direct
+🇩🇰 丹麦节点 = direct
+🇳🇴 挪威节点 = direct
+🇸🇪 瑞典节点 = direct
+🇫🇮 芬兰节点 = direct
+🇮🇸 冰岛节点 = direct
+🇨🇿 捷克节点 = direct
+🇨🇭 瑞士节点 = direct
+🇬🇷 希腊节点 = direct
+🇳🇱 荷兰节点 = direct
+🇮🇹 意大利节点 = direct
+🇱🇹 立陶宛节点 = direct
+🇪🇸 西班牙节点 = direct
+🇵🇹 葡萄牙节点 = direct
+🇧🇷 巴西节点 = direct
+🇨🇱 智利节点 = direct
+🇵🇪 秘鲁节点 = direct
+🇦🇷 阿根廷节点 = direct
+🇪🇬 埃及节点 = direct
+🇿🇦 南非节点 = direct
+
+[Proxy Group]
+🚀 节点选择 = select,♻️ 自动选择,🚀 手动切换-1,🚀 手动切换-2,♻️ IPv6-自动,🚀 IPv6-手动,🎥 流媒体解锁,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇲🇳 蒙古节点,🇮🇷 伊朗节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇮🇱 以色列节点,🇸🇦 沙特阿拉伯节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇲🇽 墨西哥节点,🇵🇦 巴拿马节点,🇷🇺 俄罗斯节点,🇺🇦 乌克兰节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇿 捷克节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇮🇹 意大利节点,🇱🇹 立陶宛节点,🇪🇸 西班牙节点,🇵🇹 葡萄牙节点,🇧🇷 巴西节点,🇨🇱 智利节点,🇵🇪 秘鲁节点,🇦🇷 阿根廷节点,🇪🇬 埃及节点,🇿🇦 南非节点,DIRECT,REJECT
+♻️ 自动选择 = url-test,本文件创建时间：Mon May 15 00:27:26 UTC 2023,🇮🇳IN-152.70.74.66-443,🇯🇵JP-18.179.52.115-28785,🇺🇸US-209.141.60.31-43500,🇸🇬SG-13.215.177.20-443,🇺🇸US-135.148.149.209-80,🇸🇬SG-13.215.194.103-443,🇸🇬SG-13.215.252.181-443,🇸🇬SG-13.215.159.48-443,🇺🇸US-137.175.6.6-443,url=http://www.gstatic.com/generate_204,interval=300,tolerance=50
+🚀 手动切换-1 = select,本文件创建时间：Mon May 15 00:27:26 UTC 2023,🇮🇳IN-152.70.74.66-443,🇯🇵JP-18.179.52.115-28785,🇺🇸US-209.141.60.31-43500,🇸🇬SG-13.215.177.20-443,🇺🇸US-135.148.149.209-80,🇸🇬SG-13.215.194.103-443,🇸🇬SG-13.215.252.181-443,🇸🇬SG-13.215.159.48-443,🇺🇸US-137.175.6.6-443
+🚀 手动切换-2 = select,本文件创建时间：Mon May 15 00:27:26 UTC 2023,🇮🇳IN-152.70.74.66-443,🇯🇵JP-18.179.52.115-28785,🇺🇸US-209.141.60.31-43500,🇸🇬SG-13.215.177.20-443,🇺🇸US-135.148.149.209-80,🇸🇬SG-13.215.194.103-443,🇸🇬SG-13.215.252.181-443,🇸🇬SG-13.215.159.48-443,🇺🇸US-137.175.6.6-443
+♻️ IPv6-自动 = url-test,🇺🇸US-135.148.149.209-80,url=http://www.gstatic.com/generate_204,interval=300,tolerance=50
+🚀 IPv6-手动 = select,🇺🇸US-135.148.149.209-80
+🛑 广告拦截 = select,DIRECT,REJECT
+📢 ChatGPT = select,🚀 节点选择,♻️ 自动选择,🚀 手动切换-1,🚀 手动切换-2,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇲🇳 蒙古节点,🇮🇷 伊朗节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇮🇱 以色列节点,🇸🇦 沙特阿拉伯节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇲🇽 墨西哥节点,🇵🇦 巴拿马节点,🇷🇺 俄罗斯节点,🇺🇦 乌克兰节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇿 捷克节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇮🇹 意大利节点,🇱🇹 立陶宛节点,🇪🇸 西班牙节点,🇵🇹 葡萄牙节点,🇧🇷 巴西节点,🇨🇱 智利节点,🇵🇪 秘鲁节点,🇦🇷 阿根廷节点,🇪🇬 埃及节点,🇿🇦 南非节点,DIRECT,REJECT
+📢 Bard = select,🚀 节点选择,♻️ 自动选择,🚀 手动切换-1,🚀 手动切换-2,🇺🇸 美国节点,🇬🇧 英国节点,DIRECT,REJECT
+Ⓜ️ NewBing = select,🚀 节点选择,♻️ 自动选择,🚀 手动切换-1,🚀 手动切换-2,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇲🇳 蒙古节点,🇮🇷 伊朗节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇮🇱 以色列节点,🇸🇦 沙特阿拉伯节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇲🇽 墨西哥节点,🇵🇦 巴拿马节点,🇷🇺 俄罗斯节点,🇺🇦 乌克兰节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇿 捷克节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇮🇹 意大利节点,🇱🇹 立陶宛节点,🇪🇸 西班牙节点,🇵🇹 葡萄牙节点,🇧🇷 巴西节点,🇨🇱 智利节点,🇵🇪 秘鲁节点,🇦🇷 阿根廷节点,🇪🇬 埃及节点,🇿🇦 南非节点,DIRECT,REJECT
+Ⓜ️ 微软服务 = select,DIRECT,🚀 节点选择,♻️ 自动选择,🚀 手动切换-1,🚀 手动切换-2,♻️ IPv6-自动,🚀 IPv6-手动,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇲🇳 蒙古节点,🇮🇷 伊朗节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇮🇱 以色列节点,🇸🇦 沙特阿拉伯节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇲🇽 墨西哥节点,🇵🇦 巴拿马节点,🇷🇺 俄罗斯节点,🇺🇦 乌克兰节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇿 捷克节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇮🇹 意大利节点,🇱🇹 立陶宛节点,🇪🇸 西班牙节点,🇵🇹 葡萄牙节点,🇧🇷 巴西节点,🇨🇱 智利节点,🇵🇪 秘鲁节点,🇦🇷 阿根廷节点,🇪🇬 埃及节点,🇿🇦 南非节点,REJECT
+🍎 苹果服务 = select,DIRECT,🚀 节点选择,♻️ 自动选择,🚀 手动切换-1,🚀 手动切换-2,♻️ IPv6-自动,🚀 IPv6-手动,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇲🇳 蒙古节点,🇮🇷 伊朗节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇮🇱 以色列节点,🇸🇦 沙特阿拉伯节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇲🇽 墨西哥节点,🇵🇦 巴拿马节点,🇷🇺 俄罗斯节点,🇺🇦 乌克兰节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇿 捷克节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇮🇹 意大利节点,🇱🇹 立陶宛节点,🇪🇸 西班牙节点,🇵🇹 葡萄牙节点,🇧🇷 巴西节点,🇨🇱 智利节点,🇵🇪 秘鲁节点,🇦🇷 阿根廷节点,🇪🇬 埃及节点,🇿🇦 南非节点,REJECT
+🎮 国际游戏 = select,DIRECT,🚀 节点选择,♻️ 自动选择,🚀 手动切换-1,🚀 手动切换-2,♻️ IPv6-自动,🚀 IPv6-手动,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇲🇳 蒙古节点,🇮🇷 伊朗节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇮🇱 以色列节点,🇸🇦 沙特阿拉伯节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇲🇽 墨西哥节点,🇵🇦 巴拿马节点,🇷🇺 俄罗斯节点,🇺🇦 乌克兰节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇿 捷克节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇮🇹 意大利节点,🇱🇹 立陶宛节点,🇪🇸 西班牙节点,🇵🇹 葡萄牙节点,🇧🇷 巴西节点,🇨🇱 智利节点,🇵🇪 秘鲁节点,🇦🇷 阿根廷节点,🇪🇬 埃及节点,🇿🇦 南非节点,REJECT
+🌍 国外媒体 = select,🚀 节点选择,♻️ 自动选择,🚀 手动切换-1,🚀 手动切换-2,♻️ IPv6-自动,🚀 IPv6-手动,🎥 流媒体解锁,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇲🇳 蒙古节点,🇮🇷 伊朗节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇮🇱 以色列节点,🇸🇦 沙特阿拉伯节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇲🇽 墨西哥节点,🇵🇦 巴拿马节点,🇷🇺 俄罗斯节点,🇺🇦 乌克兰节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇿 捷克节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇮🇹 意大利节点,🇱🇹 立陶宛节点,🇪🇸 西班牙节点,🇵🇹 葡萄牙节点,🇧🇷 巴西节点,🇨🇱 智利节点,🇵🇪 秘鲁节点,🇦🇷 阿根廷节点,🇪🇬 埃及节点,🇿🇦 南非节点,DIRECT,REJECT
+🌏 国内媒体 = select,DIRECT,🚀 节点选择,♻️ 自动选择,🚀 手动切换-1,🚀 手动切换-2,♻️ IPv6-自动,🚀 IPv6-手动,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇲🇳 蒙古节点,🇮🇷 伊朗节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇮🇱 以色列节点,🇸🇦 沙特阿拉伯节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇲🇽 墨西哥节点,🇵🇦 巴拿马节点,🇷🇺 俄罗斯节点,🇺🇦 乌克兰节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇿 捷克节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇮🇹 意大利节点,🇱🇹 立陶宛节点,🇪🇸 西班牙节点,🇵🇹 葡萄牙节点,🇧🇷 巴西节点,🇨🇱 智利节点,🇵🇪 秘鲁节点,🇦🇷 阿根廷节点,🇪🇬 埃及节点,🇿🇦 南非节点,REJECT
+🎯 国内网站 = select,DIRECT,🚀 节点选择,♻️ 自动选择,🚀 手动切换-1,🚀 手动切换-2,♻️ IPv6-自动,🚀 IPv6-手动,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇲🇳 蒙古节点,🇮🇷 伊朗节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇮🇱 以色列节点,🇸🇦 沙特阿拉伯节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇲🇽 墨西哥节点,🇵🇦 巴拿马节点,🇷🇺 俄罗斯节点,🇺🇦 乌克兰节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇿 捷克节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇮🇹 意大利节点,🇱🇹 立陶宛节点,🇪🇸 西班牙节点,🇵🇹 葡萄牙节点,🇧🇷 巴西节点,🇨🇱 智利节点,🇵🇪 秘鲁节点,🇦🇷 阿根廷节点,🇪🇬 埃及节点,🇿🇦 南非节点,REJECT
+🐟 其他网站 = select,DIRECT,🚀 节点选择,♻️ 自动选择,🚀 手动切换-1,🚀 手动切换-2,♻️ IPv6-自动,🚀 IPv6-手动,👍 高级节点,📺 省流节点,🇨🇳 大陆节点,🇭🇰 香港节点,🇲🇴 澳门节点,🇹🇼 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇲🇾 马来西亚节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇰🇭 柬埔寨节点,🇮🇩 印度尼西亚节点,🇵🇭 菲律宾节点,🇲🇳 蒙古节点,🇮🇷 伊朗节点,🇮🇳 印度节点,🇹🇷 土耳其节点,🇮🇱 以色列节点,🇸🇦 沙特阿拉伯节点,🇦🇺 澳大利亚节点,🇳🇿 新西兰节点,🇨🇦 加拿大节点,🇲🇽 墨西哥节点,🇵🇦 巴拿马节点,🇷🇺 俄罗斯节点,🇺🇦 乌克兰节点,🇺🇸 美国节点,🇬🇧 英国节点,🇫🇷 法国节点,🇩🇪 德国节点,🇵🇱 波兰节点,🇩🇰 丹麦节点,🇳🇴 挪威节点,🇸🇪 瑞典节点,🇫🇮 芬兰节点,🇮🇸 冰岛节点,🇨🇿 捷克节点,🇨🇭 瑞士节点,🇬🇷 希腊节点,🇳🇱 荷兰节点,🇮🇹 意大利节点,🇱🇹 立陶宛节点,🇪🇸 西班牙节点,🇵🇹 葡萄牙节点,🇧🇷 巴西节点,🇨🇱 智利节点,🇵🇪 秘鲁节点,🇦🇷 阿根廷节点,🇪🇬 埃及节点,🇿🇦 南非节点,REJECT
+🇸🇬 新加坡节点 = url-test,🇸🇬SG-13.215.177.20-443,🇸🇬SG-13.215.194.103-443,🇸🇬SG-13.215.252.181-443,🇸🇬SG-13.215.159.48-443,url=http://www.gstatic.com/generate_204,interval=300,tolerance=50
+🇯🇵 日本节点 = url-test,🇯🇵JP-18.179.52.115-28785,url=http://www.gstatic.com/generate_204,interval=300,tolerance=50
+🇮🇳 印度节点 = url-test,🇮🇳IN-152.70.74.66-443,url=http://www.gstatic.com/generate_204,interval=300,tolerance=50
+🇺🇸 美国节点 = url-test,🇺🇸US-209.141.60.31-43500,🇺🇸US-135.148.149.209-80,🇺🇸US-137.175.6.6-443,url=http://www.gstatic.com/generate_204,interval=300,tolerance=150
+
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/BanAD.list,🛑 广告拦截,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/BanProgramAD.list,🛑 广告拦截,update-interval=86400
+DOMAIN-SUFFIX,openai.com,📢 ChatGPT
+DOMAIN-SUFFIX,challenges.cloudflare.com,📢 ChatGPT
+DOMAIN-SUFFIX,ai.com,📢 ChatGPT
+DOMAIN-SUFFIX,bard.google.com,📢 Bard
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/Bing.list,Ⓜ️ NewBing,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/Microsoft.list,Ⓜ️ 微软服务,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/Apple.list,🍎 苹果服务,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/Game.list,🎮 国际游戏,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/ProxyMedia.list,🌍 国外媒体,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/ChinaMedia.list,🌏 国内媒体,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/ProxyGFWlist.list,🚀 节点选择,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/LocalAreaNetwork.list,🎯 国内网站,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/UnBan.list,🎯 国内网站,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/ChinaDomain.list,🎯 国内网站,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/ChinaCompanyIp.list,🎯 国内网站,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/ChinaIp.list,🎯 国内网站,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/GoogleCN.list,🎯 国内网站,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/SteamCN.list,🎯 国内网站,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/Download.list,🎯 国内网站,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/thuhollow2/rule/main/Clash/Direct.list,🎯 国内网站,update-interval=86400
+GEOIP,CN,🎯 国内网站,no-resolve
+FINAL,🐟 其他网站
+
