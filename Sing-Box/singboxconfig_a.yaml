@@ -1,0 +1,4785 @@
+{
+    "log": {
+        "level": "debug",
+        "timestamp": true
+    },
+    "experimental": {
+        "clash_api": {
+            "external_controller": "127.0.0.1:9090",
+            "external_ui": "ui",
+            "secret": "",
+            "default_mode": "rule"
+        },
+        "cache_file": {
+            "enabled": true,
+            "store_fakeip": false
+        }
+    },
+    "dns": {
+        "servers": [
+            {
+                "address": "1.0.0.1",
+                "detour": "proxy",
+                "tag": "proxy"
+            },
+            {
+                "address": "223.5.5.5",
+                "detour": "direct",
+                "tag": "local"
+            },
+            {
+                "address": "rcode://success",
+                "tag": "block"
+            }
+        ],
+        "rules": [
+            {
+                "outbound": "any",
+                "server": "local",
+                "disable_cache": true
+            },
+            {
+                "clash_mode": "direct",
+                "server": "local"
+            },
+            {
+                "clash_mode": "global",
+                "server": "proxy"
+            },
+            {
+                "rule_set": "LocalAreaNetwork",
+                "server": "local"
+            },
+            {
+                "rule_set": "OpenAI",
+                "server": "proxy"
+            },
+            {
+                "rule_set": "Claude",
+                "server": "proxy"
+            },
+            {
+                "rule_set": "Gemini",
+                "server": "proxy"
+            },
+            {
+                "rule_set": "Bing",
+                "server": "proxy"
+            },
+            {
+                "rule_set": "Microsoft",
+                "server": "local"
+            },
+            {
+                "rule_set": "Apple",
+                "server": "local"
+            },
+            {
+                "rule_set": "Game",
+                "server": "local"
+            },
+            {
+                "rule_set": "Scholar",
+                "server": "local"
+            },
+            {
+                "rule_set": "Netflix",
+                "server": "proxy"
+            },
+            {
+                "rule_set": "Disney",
+                "server": "proxy"
+            },
+            {
+                "rule_set": "PrimeVideo",
+                "server": "proxy"
+            },
+            {
+                "rule_set": "HBO",
+                "server": "proxy"
+            },
+            {
+                "rule_set": "ParamountPlus",
+                "server": "proxy"
+            },
+            {
+                "rule_set": "TikTok",
+                "server": "proxy"
+            },
+            {
+                "rule_set": "Spotify",
+                "server": "proxy"
+            },
+            {
+                "rule_set": "ProxyMedia",
+                "server": "proxy"
+            },
+            {
+                "rule_set": "ChinaMedia",
+                "server": "local"
+            },
+            {
+                "rule_set": "ChinaDomain",
+                "server": "local"
+            },
+            {
+                "rule_set": "ProxyGFW",
+                "server": "proxy"
+            },
+            {
+                "rule_set": "Global",
+                "server": "proxy"
+            },
+            {
+                "rule_set": "Download",
+                "server": "local"
+            },
+            {
+                "rule_set": "ChinaIPv4",
+                "server": "local"
+            },
+            {
+                "rule_set": "ChinaIPv6",
+                "server": "local"
+            }
+        ],
+        "strategy": "prefer_ipv4"
+    },
+    "inbounds": [
+        {
+            "type": "tun",
+            "inet4_address": "172.19.0.1/30",
+            "inet6_address": "2001:0470:f9da:fdfa::1/64",
+            "mtu": 9000,
+            "auto_route": true,
+            "strict_route": true,
+            "sniff": true,
+            "endpoint_independent_nat": false,
+            "stack": "system",
+            "platform": {
+                "http_proxy": {
+                    "enabled": true,
+                    "server": "127.0.0.1",
+                    "server_port": 9080
+                }
+            }
+        },
+        {
+            "type": "mixed",
+            "listen": "127.0.0.1",
+            "listen_port": 9080,
+            "sniff": true,
+            "users": []
+        }
+    ],
+    "outbounds": [
+        {
+            "tag": "🚀 Node Group - 1",
+            "type": "selector",
+            "outbounds": [
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🤖 OpenAI Unlocked Nodes - Auto Select",
+                "🤖 OpenAI Unlocked Nodes - Manual Select",
+                "🤖 Claude Unlocked Nodes - Auto Select",
+                "🤖 Claude Unlocked Nodes - Manual Select",
+                "🤖 Gemini Unlocked Nodes - Auto Select",
+                "🤖 Gemini Unlocked Nodes - Manual Select",
+                "🤖 New Bing Unlocked Nodes - Auto Select",
+                "🤖 New Bing Unlocked Nodes - Manual Select",
+                "🎥 Netflix Unlocked Nodes - Auto Select",
+                "🎥 Netflix Unlocked Nodes - Manual Select",
+                "🎥 Disney+ Unlocked Nodes - Auto Select",
+                "🎥 Disney+ Unlocked Nodes - Manual Select",
+                "🎥 Prime Video Unlocked Nodes - Auto Select",
+                "🎥 Prime Video Unlocked Nodes - Manual Select",
+                "🎥 HBO Max Unlocked Nodes - Auto Select",
+                "🎥 HBO Max Unlocked Nodes - Manual Select",
+                "🎥 Paramount+ Unlocked Nodes - Auto Select",
+                "🎥 Paramount+ Unlocked Nodes - Manual Select",
+                "🎥 TikTok Unlocked Nodes - Auto Select",
+                "🎥 TikTok Unlocked Nodes - Manual Select",
+                "🎥 Spotify Unlocked Nodes - Auto Select",
+                "🎥 Spotify Unlocked Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "direct",
+                "block"
+            ]
+        },
+        {
+            "tag": "🚀 Node Group - 2",
+            "type": "selector",
+            "outbounds": [
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🤖 OpenAI Unlocked Nodes - Auto Select",
+                "🤖 OpenAI Unlocked Nodes - Manual Select",
+                "🤖 Claude Unlocked Nodes - Auto Select",
+                "🤖 Claude Unlocked Nodes - Manual Select",
+                "🤖 Gemini Unlocked Nodes - Auto Select",
+                "🤖 Gemini Unlocked Nodes - Manual Select",
+                "🤖 New Bing Unlocked Nodes - Auto Select",
+                "🤖 New Bing Unlocked Nodes - Manual Select",
+                "🎥 Netflix Unlocked Nodes - Auto Select",
+                "🎥 Netflix Unlocked Nodes - Manual Select",
+                "🎥 Disney+ Unlocked Nodes - Auto Select",
+                "🎥 Disney+ Unlocked Nodes - Manual Select",
+                "🎥 Prime Video Unlocked Nodes - Auto Select",
+                "🎥 Prime Video Unlocked Nodes - Manual Select",
+                "🎥 HBO Max Unlocked Nodes - Auto Select",
+                "🎥 HBO Max Unlocked Nodes - Manual Select",
+                "🎥 Paramount+ Unlocked Nodes - Auto Select",
+                "🎥 Paramount+ Unlocked Nodes - Manual Select",
+                "🎥 TikTok Unlocked Nodes - Auto Select",
+                "🎥 TikTok Unlocked Nodes - Manual Select",
+                "🎥 Spotify Unlocked Nodes - Auto Select",
+                "🎥 Spotify Unlocked Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "direct",
+                "block"
+            ]
+        },
+        {
+            "tag": "🎮 Global Game",
+            "type": "selector",
+            "outbounds": [
+                "direct",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "block"
+            ]
+        },
+        {
+            "tag": "📖 Global Scholar",
+            "type": "selector",
+            "outbounds": [
+                "direct",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "block"
+            ]
+        },
+        {
+            "tag": "🌍 Global Media",
+            "type": "selector",
+            "outbounds": [
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "direct",
+                "block"
+            ]
+        },
+        {
+            "tag": "🧱 Global Website",
+            "type": "selector",
+            "outbounds": [
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "direct",
+                "block"
+            ]
+        },
+        {
+            "tag": "🌏 China Media",
+            "type": "selector",
+            "outbounds": [
+                "direct",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "block"
+            ]
+        },
+        {
+            "tag": "🎯 China Website",
+            "type": "selector",
+            "outbounds": [
+                "direct",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "block"
+            ]
+        },
+        {
+            "tag": "🐟 Remaining Website",
+            "type": "selector",
+            "outbounds": [
+                "direct",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "block"
+            ]
+        },
+        {
+            "tag": "🤖 OpenAI",
+            "type": "selector",
+            "outbounds": [
+                "🤖 OpenAI Unlocked Nodes - Auto Select",
+                "🤖 OpenAI Unlocked Nodes - Manual Select",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "direct",
+                "block"
+            ]
+        },
+        {
+            "tag": "🤖 Claude",
+            "type": "selector",
+            "outbounds": [
+                "🤖 Claude Unlocked Nodes - Auto Select",
+                "🤖 Claude Unlocked Nodes - Manual Select",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "direct",
+                "block"
+            ]
+        },
+        {
+            "tag": "🤖 Gemini",
+            "type": "selector",
+            "outbounds": [
+                "🤖 Gemini Unlocked Nodes - Auto Select",
+                "🤖 Gemini Unlocked Nodes - Manual Select",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "direct",
+                "block"
+            ]
+        },
+        {
+            "tag": "🤖 New Bing",
+            "type": "selector",
+            "outbounds": [
+                "🤖 New Bing Unlocked Nodes - Auto Select",
+                "🤖 New Bing Unlocked Nodes - Manual Select",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "direct",
+                "block"
+            ]
+        },
+        {
+            "tag": "Ⓜ️ Microsoft",
+            "type": "selector",
+            "outbounds": [
+                "direct",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "block"
+            ]
+        },
+        {
+            "tag": "🍎 Apple",
+            "type": "selector",
+            "outbounds": [
+                "direct",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "block"
+            ]
+        },
+        {
+            "tag": "🎥 Netflix",
+            "type": "selector",
+            "outbounds": [
+                "🎥 Netflix Unlocked Nodes - Auto Select",
+                "🎥 Netflix Unlocked Nodes - Manual Select",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "direct",
+                "block"
+            ]
+        },
+        {
+            "tag": "🎥 Disney+",
+            "type": "selector",
+            "outbounds": [
+                "🎥 Disney+ Unlocked Nodes - Auto Select",
+                "🎥 Disney+ Unlocked Nodes - Manual Select",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "direct",
+                "block"
+            ]
+        },
+        {
+            "tag": "🎥 Prime Video",
+            "type": "selector",
+            "outbounds": [
+                "🎥 Prime Video Unlocked Nodes - Auto Select",
+                "🎥 Prime Video Unlocked Nodes - Manual Select",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "direct",
+                "block"
+            ]
+        },
+        {
+            "tag": "🎥 HBO Max",
+            "type": "selector",
+            "outbounds": [
+                "🎥 HBO Max Unlocked Nodes - Auto Select",
+                "🎥 HBO Max Unlocked Nodes - Manual Select",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "direct",
+                "block"
+            ]
+        },
+        {
+            "tag": "🎥 Paramount+",
+            "type": "selector",
+            "outbounds": [
+                "🎥 Paramount+ Unlocked Nodes - Auto Select",
+                "🎥 Paramount+ Unlocked Nodes - Manual Select",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "direct",
+                "block"
+            ]
+        },
+        {
+            "tag": "🎥 TikTok",
+            "type": "selector",
+            "outbounds": [
+                "🎥 TikTok Unlocked Nodes - Auto Select",
+                "🎥 TikTok Unlocked Nodes - Manual Select",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "direct",
+                "block"
+            ]
+        },
+        {
+            "tag": "🎥 Spotify",
+            "type": "selector",
+            "outbounds": [
+                "🎥 Spotify Unlocked Nodes - Auto Select",
+                "🎥 Spotify Unlocked Nodes - Manual Select",
+                "🚀 Node Group - 1",
+                "🚀 Node Group - 2",
+                "♻️ All Nodes Except CN - Auto Select",
+                "♻️ All Nodes Except CN/HK/MO - Auto Select",
+                "🚀 All Nodes - 1 - Manual Select",
+                "🚀 All Nodes - 2 - Manual Select",
+                "♻️ IPv6 Nodes Except CN - Auto Select",
+                "🚀 IPv6 Nodes - Manual Select",
+                "👍 High Speed Nodes - Auto Select",
+                "👍 High Speed Nodes - Manual Select",
+                "🇦🇪 United Arab Emirates Nodes - Auto Select",
+                "🇦🇺 Australia Nodes - Auto Select",
+                "🇧🇪 Belgium Nodes - Auto Select",
+                "🇩🇪 Germany Nodes - Auto Select",
+                "🇫🇮 Finland Nodes - Auto Select",
+                "🇫🇷 France Nodes - Auto Select",
+                "🇬🇧 United Kingdom Nodes - Auto Select",
+                "🇭🇰 Hong Kong Nodes - Auto Select",
+                "🇮🇳 India Nodes - Auto Select",
+                "🇯🇵 Japan Nodes - Auto Select",
+                "🇰🇷 South Korea Nodes - Auto Select",
+                "🇲🇾 Malaysia Nodes - Auto Select",
+                "🇳🇱 Netherlands Nodes - Auto Select",
+                "🇸🇪 Sweden Nodes - Auto Select",
+                "🇸🇬 Singapore Nodes - Auto Select",
+                "🇹🇷 Turkey Nodes - Auto Select",
+                "🇹🇼 Taiwan Nodes - Auto Select",
+                "🇺🇸 United States Nodes - Auto Select",
+                "direct",
+                "block"
+            ]
+        },
+        {
+            "tag": "♻️ All Nodes Except CN - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇦🇪AE-5.44.42.121-443",
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-116.203.47.128-29253",
+                "🇩🇪DE-195.248.241.99-43472",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-152.228.242.193-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-176.31.25.244-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇭🇰HK-104.28.156.208-443",
+                "🇭🇰HK-47.243.92.199-3128",
+                "🇭🇰HK-47.76.40.192-38716",
+                "🇭🇰HK-47.76.44.200-14566",
+                "🇭🇰HK-47.76.46.251-30866",
+                "🇭🇰HK-47.76.48.165-39725",
+                "🇭🇰HK-47.76.51.74-57747",
+                "🇭🇰HK-8.217.121.58-28722",
+                "🇭🇰HK-8.217.209.11-37056",
+                "🇭🇰HK-8.217.21.92-56231",
+                "🇭🇰HK-8.217.210.78-46482",
+                "🇭🇰HK-8.217.226.145-31800",
+                "🇭🇰HK-8.217.5.14-57125",
+                "🇭🇰HK-8.218.13.189-44805",
+                "🇭🇰HK-8.219.5.10-443",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇷TR-89.43.31.134-3128",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.168.62.130-7890",
+                "🇺🇸US-104.28.152.165-80",
+                "🇺🇸US-104.28.152.171-80",
+                "🇺🇸US-104.28.152.186-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.154.28-8443",
+                "🇺🇸US-104.28.157.105-80",
+                "🇺🇸US-104.28.157.116-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-104.28.161.23-34237",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-174.77.111.196-4145",
+                "🇺🇸US-174.77.111.197-4145",
+                "🇺🇸US-184.170.249.65-4145",
+                "🇺🇸US-184.181.217.213-4145",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80",
+                "🇺🇸US-72.195.34.42-4145",
+                "🇺🇸US-8.219.237.250-36633"
+            ]
+        },
+        {
+            "tag": "♻️ All Nodes Except CN/HK/MO - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇦🇪AE-5.44.42.121-443",
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-116.203.47.128-29253",
+                "🇩🇪DE-195.248.241.99-43472",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-152.228.242.193-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-176.31.25.244-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇷TR-89.43.31.134-3128",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.168.62.130-7890",
+                "🇺🇸US-104.28.152.165-80",
+                "🇺🇸US-104.28.152.171-80",
+                "🇺🇸US-104.28.152.186-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.154.28-8443",
+                "🇺🇸US-104.28.157.105-80",
+                "🇺🇸US-104.28.157.116-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-104.28.161.23-34237",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-174.77.111.196-4145",
+                "🇺🇸US-174.77.111.197-4145",
+                "🇺🇸US-184.170.249.65-4145",
+                "🇺🇸US-184.181.217.213-4145",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80",
+                "🇺🇸US-72.195.34.42-4145",
+                "🇺🇸US-8.219.237.250-36633"
+            ]
+        },
+        {
+            "tag": "🚀 All Nodes - 1 - Manual Select",
+            "type": "selector",
+            "outbounds": [
+                "File Creation Time: Fri Apr 26 20:15:32 UTC 2024",
+                "🇦🇪AE-5.44.42.121-443",
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-116.203.47.128-29253",
+                "🇩🇪DE-195.248.241.99-43472",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-152.228.242.193-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-176.31.25.244-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇭🇰HK-104.28.156.208-443",
+                "🇭🇰HK-47.243.92.199-3128",
+                "🇭🇰HK-47.76.40.192-38716",
+                "🇭🇰HK-47.76.44.200-14566",
+                "🇭🇰HK-47.76.46.251-30866",
+                "🇭🇰HK-47.76.48.165-39725",
+                "🇭🇰HK-47.76.51.74-57747",
+                "🇭🇰HK-8.217.121.58-28722",
+                "🇭🇰HK-8.217.209.11-37056",
+                "🇭🇰HK-8.217.21.92-56231",
+                "🇭🇰HK-8.217.210.78-46482",
+                "🇭🇰HK-8.217.226.145-31800",
+                "🇭🇰HK-8.217.5.14-57125",
+                "🇭🇰HK-8.218.13.189-44805",
+                "🇭🇰HK-8.219.5.10-443",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇷TR-89.43.31.134-3128",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.168.62.130-7890",
+                "🇺🇸US-104.28.152.165-80",
+                "🇺🇸US-104.28.152.171-80",
+                "🇺🇸US-104.28.152.186-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.154.28-8443",
+                "🇺🇸US-104.28.157.105-80",
+                "🇺🇸US-104.28.157.116-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-104.28.161.23-34237",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-174.77.111.196-4145",
+                "🇺🇸US-174.77.111.197-4145",
+                "🇺🇸US-184.170.249.65-4145",
+                "🇺🇸US-184.181.217.213-4145",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80",
+                "🇺🇸US-72.195.34.42-4145",
+                "🇺🇸US-8.219.237.250-36633"
+            ]
+        },
+        {
+            "tag": "🚀 All Nodes - 2 - Manual Select",
+            "type": "selector",
+            "outbounds": [
+                "File Creation Time: Fri Apr 26 20:15:32 UTC 2024",
+                "🇦🇪AE-5.44.42.121-443",
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-116.203.47.128-29253",
+                "🇩🇪DE-195.248.241.99-43472",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-152.228.242.193-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-176.31.25.244-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇭🇰HK-104.28.156.208-443",
+                "🇭🇰HK-47.243.92.199-3128",
+                "🇭🇰HK-47.76.40.192-38716",
+                "🇭🇰HK-47.76.44.200-14566",
+                "🇭🇰HK-47.76.46.251-30866",
+                "🇭🇰HK-47.76.48.165-39725",
+                "🇭🇰HK-47.76.51.74-57747",
+                "🇭🇰HK-8.217.121.58-28722",
+                "🇭🇰HK-8.217.209.11-37056",
+                "🇭🇰HK-8.217.21.92-56231",
+                "🇭🇰HK-8.217.210.78-46482",
+                "🇭🇰HK-8.217.226.145-31800",
+                "🇭🇰HK-8.217.5.14-57125",
+                "🇭🇰HK-8.218.13.189-44805",
+                "🇭🇰HK-8.219.5.10-443",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇷TR-89.43.31.134-3128",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.168.62.130-7890",
+                "🇺🇸US-104.28.152.165-80",
+                "🇺🇸US-104.28.152.171-80",
+                "🇺🇸US-104.28.152.186-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.154.28-8443",
+                "🇺🇸US-104.28.157.105-80",
+                "🇺🇸US-104.28.157.116-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-104.28.161.23-34237",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-174.77.111.196-4145",
+                "🇺🇸US-174.77.111.197-4145",
+                "🇺🇸US-184.170.249.65-4145",
+                "🇺🇸US-184.181.217.213-4145",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80",
+                "🇺🇸US-72.195.34.42-4145",
+                "🇺🇸US-8.219.237.250-36633"
+            ]
+        },
+        {
+            "tag": "♻️ IPv6 Nodes Except CN - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇦🇺AU-104.28.154.171-443",
+                "🇩🇪DE-116.203.47.128-29253",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-152.228.242.193-443",
+                "🇫🇷FR-176.31.25.244-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇭🇰HK-104.28.156.208-443",
+                "🇭🇰HK-8.219.5.10-443",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.28.152.165-80",
+                "🇺🇸US-104.28.152.171-80",
+                "🇺🇸US-104.28.152.186-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.154.28-8443",
+                "🇺🇸US-104.28.157.105-80",
+                "🇺🇸US-104.28.157.116-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80",
+                "🇺🇸US-8.219.237.250-36633"
+            ]
+        },
+        {
+            "tag": "🚀 IPv6 Nodes - Manual Select",
+            "type": "selector",
+            "outbounds": [
+                "🇦🇺AU-104.28.154.171-443",
+                "🇩🇪DE-116.203.47.128-29253",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-152.228.242.193-443",
+                "🇫🇷FR-176.31.25.244-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇭🇰HK-104.28.156.208-443",
+                "🇭🇰HK-8.219.5.10-443",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.28.152.165-80",
+                "🇺🇸US-104.28.152.171-80",
+                "🇺🇸US-104.28.152.186-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.154.28-8443",
+                "🇺🇸US-104.28.157.105-80",
+                "🇺🇸US-104.28.157.116-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80",
+                "🇺🇸US-8.219.237.250-36633"
+            ]
+        },
+        {
+            "tag": "👍 High Speed Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇦🇪AE-5.44.42.121-443",
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-116.203.47.128-29253",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇭🇰HK-104.28.156.208-443",
+                "🇭🇰HK-47.76.40.192-38716",
+                "🇭🇰HK-47.76.44.200-14566",
+                "🇭🇰HK-47.76.46.251-30866",
+                "🇭🇰HK-47.76.48.165-39725",
+                "🇭🇰HK-8.217.121.58-28722",
+                "🇭🇰HK-8.217.209.11-37056",
+                "🇭🇰HK-8.217.21.92-56231",
+                "🇭🇰HK-8.217.210.78-46482",
+                "🇭🇰HK-8.217.226.145-31800",
+                "🇭🇰HK-8.217.5.14-57125",
+                "🇭🇰HK-8.218.13.189-44805",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.154.28-8443",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-5.78.101.178-80",
+                "🇺🇸US-8.219.237.250-36633"
+            ]
+        },
+        {
+            "tag": "👍 High Speed Nodes - Manual Select",
+            "type": "selector",
+            "outbounds": [
+                "🇦🇪AE-5.44.42.121-443",
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-116.203.47.128-29253",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇭🇰HK-104.28.156.208-443",
+                "🇭🇰HK-47.76.40.192-38716",
+                "🇭🇰HK-47.76.44.200-14566",
+                "🇭🇰HK-47.76.46.251-30866",
+                "🇭🇰HK-47.76.48.165-39725",
+                "🇭🇰HK-8.217.121.58-28722",
+                "🇭🇰HK-8.217.209.11-37056",
+                "🇭🇰HK-8.217.21.92-56231",
+                "🇭🇰HK-8.217.210.78-46482",
+                "🇭🇰HK-8.217.226.145-31800",
+                "🇭🇰HK-8.217.5.14-57125",
+                "🇭🇰HK-8.218.13.189-44805",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.154.28-8443",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-5.78.101.178-80",
+                "🇺🇸US-8.219.237.250-36633"
+            ]
+        },
+        {
+            "tag": "🤖 OpenAI Unlocked Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇦🇪AE-5.44.42.121-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80"
+            ]
+        },
+        {
+            "tag": "🤖 OpenAI Unlocked Nodes - Manual Select",
+            "type": "selector",
+            "outbounds": [
+                "🇦🇪AE-5.44.42.121-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80"
+            ]
+        },
+        {
+            "tag": "🤖 Claude Unlocked Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇦🇪AE-5.44.42.121-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-116.203.47.128-29253",
+                "🇩🇪DE-195.248.241.99-43472",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-176.31.25.244-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.28.152.171-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80"
+            ]
+        },
+        {
+            "tag": "🤖 Claude Unlocked Nodes - Manual Select",
+            "type": "selector",
+            "outbounds": [
+                "🇦🇪AE-5.44.42.121-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-116.203.47.128-29253",
+                "🇩🇪DE-195.248.241.99-43472",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-176.31.25.244-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.28.152.171-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80"
+            ]
+        },
+        {
+            "tag": "🤖 Gemini Unlocked Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇦🇺AU-104.28.154.171-443",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-176.31.25.244-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.28.152.165-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-104.28.161.23-34237",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80"
+            ]
+        },
+        {
+            "tag": "🤖 Gemini Unlocked Nodes - Manual Select",
+            "type": "selector",
+            "outbounds": [
+                "🇦🇺AU-104.28.154.171-443",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-176.31.25.244-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.28.152.165-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-104.28.161.23-34237",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80"
+            ]
+        },
+        {
+            "tag": "🤖 New Bing Unlocked Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇦🇪AE-5.44.42.121-443",
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-176.31.25.244-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇭🇰HK-104.28.156.208-443",
+                "🇭🇰HK-47.76.40.192-38716",
+                "🇭🇰HK-47.76.44.200-14566",
+                "🇭🇰HK-47.76.46.251-30866",
+                "🇭🇰HK-47.76.48.165-39725",
+                "🇭🇰HK-47.76.51.74-57747",
+                "🇭🇰HK-8.217.121.58-28722",
+                "🇭🇰HK-8.217.209.11-37056",
+                "🇭🇰HK-8.217.21.92-56231",
+                "🇭🇰HK-8.217.210.78-46482",
+                "🇭🇰HK-8.217.226.145-31800",
+                "🇭🇰HK-8.217.5.14-57125",
+                "🇭🇰HK-8.218.13.189-44805",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.168.62.130-7890",
+                "🇺🇸US-104.28.152.165-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.157.105-80",
+                "🇺🇸US-104.28.157.116-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80"
+            ]
+        },
+        {
+            "tag": "🤖 New Bing Unlocked Nodes - Manual Select",
+            "type": "selector",
+            "outbounds": [
+                "🇦🇪AE-5.44.42.121-443",
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-176.31.25.244-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇭🇰HK-104.28.156.208-443",
+                "🇭🇰HK-47.76.40.192-38716",
+                "🇭🇰HK-47.76.44.200-14566",
+                "🇭🇰HK-47.76.46.251-30866",
+                "🇭🇰HK-47.76.48.165-39725",
+                "🇭🇰HK-47.76.51.74-57747",
+                "🇭🇰HK-8.217.121.58-28722",
+                "🇭🇰HK-8.217.209.11-37056",
+                "🇭🇰HK-8.217.21.92-56231",
+                "🇭🇰HK-8.217.210.78-46482",
+                "🇭🇰HK-8.217.226.145-31800",
+                "🇭🇰HK-8.217.5.14-57125",
+                "🇭🇰HK-8.218.13.189-44805",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.168.62.130-7890",
+                "🇺🇸US-104.28.152.165-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.157.105-80",
+                "🇺🇸US-104.28.157.116-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80"
+            ]
+        },
+        {
+            "tag": "🎥 Netflix Unlocked Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.154.28-8443",
+                "🇺🇸US-104.28.157.105-80",
+                "🇺🇸US-104.28.161.23-34237",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-5.78.101.178-80"
+            ]
+        },
+        {
+            "tag": "🎥 Netflix Unlocked Nodes - Manual Select",
+            "type": "selector",
+            "outbounds": [
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.154.28-8443",
+                "🇺🇸US-104.28.157.105-80",
+                "🇺🇸US-104.28.161.23-34237",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-5.78.101.178-80"
+            ]
+        },
+        {
+            "tag": "🎥 Disney+ Unlocked Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443"
+            ]
+        },
+        {
+            "tag": "🎥 Disney+ Unlocked Nodes - Manual Select",
+            "type": "selector",
+            "outbounds": [
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443"
+            ]
+        },
+        {
+            "tag": "🎥 Prime Video Unlocked Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇦🇪AE-5.44.42.121-443",
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇭🇰HK-104.28.156.208-443",
+                "🇭🇰HK-47.76.40.192-38716",
+                "🇭🇰HK-47.76.44.200-14566",
+                "🇭🇰HK-47.76.46.251-30866",
+                "🇭🇰HK-47.76.48.165-39725",
+                "🇭🇰HK-47.76.51.74-57747",
+                "🇭🇰HK-8.217.121.58-28722",
+                "🇭🇰HK-8.217.209.11-37056",
+                "🇭🇰HK-8.217.21.92-56231",
+                "🇭🇰HK-8.217.210.78-46482",
+                "🇭🇰HK-8.217.226.145-31800",
+                "🇭🇰HK-8.217.5.14-57125",
+                "🇭🇰HK-8.218.13.189-44805",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.28.152.186-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.157.116-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80"
+            ]
+        },
+        {
+            "tag": "🎥 Prime Video Unlocked Nodes - Manual Select",
+            "type": "selector",
+            "outbounds": [
+                "🇦🇪AE-5.44.42.121-443",
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇭🇰HK-104.28.156.208-443",
+                "🇭🇰HK-47.76.40.192-38716",
+                "🇭🇰HK-47.76.44.200-14566",
+                "🇭🇰HK-47.76.46.251-30866",
+                "🇭🇰HK-47.76.48.165-39725",
+                "🇭🇰HK-47.76.51.74-57747",
+                "🇭🇰HK-8.217.121.58-28722",
+                "🇭🇰HK-8.217.209.11-37056",
+                "🇭🇰HK-8.217.21.92-56231",
+                "🇭🇰HK-8.217.210.78-46482",
+                "🇭🇰HK-8.217.226.145-31800",
+                "🇭🇰HK-8.217.5.14-57125",
+                "🇭🇰HK-8.218.13.189-44805",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.28.152.186-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.157.116-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80"
+            ]
+        },
+        {
+            "tag": "🎥 HBO Max Unlocked Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇧🇪BE-95.164.62.231-443",
+                "🇫🇮FI-45.159.249.213-443"
+            ]
+        },
+        {
+            "tag": "🎥 HBO Max Unlocked Nodes - Manual Select",
+            "type": "selector",
+            "outbounds": [
+                "🇧🇪BE-95.164.62.231-443",
+                "🇫🇮FI-45.159.249.213-443"
+            ]
+        },
+        {
+            "tag": "🎥 Paramount+ Unlocked Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-152.228.242.193-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.28.152.165-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.154.28-8443",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80"
+            ]
+        },
+        {
+            "tag": "🎥 Paramount+ Unlocked Nodes - Manual Select",
+            "type": "selector",
+            "outbounds": [
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-152.228.242.193-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.28.152.165-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.154.28-8443",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80"
+            ]
+        },
+        {
+            "tag": "🎥 TikTok Unlocked Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇦🇪AE-5.44.42.121-443",
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇭🇰HK-104.28.156.208-443",
+                "🇭🇰HK-47.76.40.192-38716",
+                "🇭🇰HK-47.76.44.200-14566",
+                "🇭🇰HK-47.76.46.251-30866",
+                "🇭🇰HK-47.76.48.165-39725",
+                "🇭🇰HK-47.76.51.74-57747",
+                "🇭🇰HK-8.219.5.10-443",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.28.152.186-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.157.116-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80"
+            ]
+        },
+        {
+            "tag": "🎥 TikTok Unlocked Nodes - Manual Select",
+            "type": "selector",
+            "outbounds": [
+                "🇦🇪AE-5.44.42.121-443",
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-104.28.211.187-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇭🇰HK-104.28.156.208-443",
+                "🇭🇰HK-47.76.40.192-38716",
+                "🇭🇰HK-47.76.44.200-14566",
+                "🇭🇰HK-47.76.46.251-30866",
+                "🇭🇰HK-47.76.48.165-39725",
+                "🇭🇰HK-47.76.51.74-57747",
+                "🇭🇰HK-8.219.5.10-443",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.28.152.186-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.157.116-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80"
+            ]
+        },
+        {
+            "tag": "🎥 Spotify Unlocked Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-116.203.47.128-29253",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-152.228.242.193-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-176.31.25.244-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇭🇰HK-104.28.156.208-443",
+                "🇭🇰HK-47.76.40.192-38716",
+                "🇭🇰HK-47.76.44.200-14566",
+                "🇭🇰HK-47.76.46.251-30866",
+                "🇭🇰HK-47.76.48.165-39725",
+                "🇭🇰HK-47.76.51.74-57747",
+                "🇭🇰HK-8.217.121.58-28722",
+                "🇭🇰HK-8.217.209.11-37056",
+                "🇭🇰HK-8.217.21.92-56231",
+                "🇭🇰HK-8.217.210.78-46482",
+                "🇭🇰HK-8.217.226.145-31800",
+                "🇭🇰HK-8.217.5.14-57125",
+                "🇭🇰HK-8.218.13.189-44805",
+                "🇭🇰HK-8.219.5.10-443",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.28.152.165-80",
+                "🇺🇸US-104.28.152.186-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-104.28.161.23-34237",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80"
+            ]
+        },
+        {
+            "tag": "🎥 Spotify Unlocked Nodes - Manual Select",
+            "type": "selector",
+            "outbounds": [
+                "🇦🇺AU-104.28.154.171-443",
+                "🇧🇪BE-95.164.62.231-443",
+                "🇩🇪DE-116.203.47.128-29253",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80",
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-152.228.242.193-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-176.31.25.244-443",
+                "🇫🇷FR-57.128.25.100-443",
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80",
+                "🇭🇰HK-104.28.156.208-443",
+                "🇭🇰HK-47.76.40.192-38716",
+                "🇭🇰HK-47.76.44.200-14566",
+                "🇭🇰HK-47.76.46.251-30866",
+                "🇭🇰HK-47.76.48.165-39725",
+                "🇭🇰HK-47.76.51.74-57747",
+                "🇭🇰HK-8.217.121.58-28722",
+                "🇭🇰HK-8.217.209.11-37056",
+                "🇭🇰HK-8.217.21.92-56231",
+                "🇭🇰HK-8.217.210.78-46482",
+                "🇭🇰HK-8.217.226.145-31800",
+                "🇭🇰HK-8.217.5.14-57125",
+                "🇭🇰HK-8.218.13.189-44805",
+                "🇭🇰HK-8.219.5.10-443",
+                "🇭🇰HK-8.222.221.109-80",
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992",
+                "🇰🇷KR-104.28.164.12-12305",
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇸🇬SG-8.222.244.123-8443",
+                "🇹🇼TW-104.28.159.157-36633",
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.28.152.165-80",
+                "🇺🇸US-104.28.152.186-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-104.28.161.23-34237",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80"
+            ]
+        },
+        {
+            "tag": "🇦🇪 United Arab Emirates Nodes - Auto Select",
+            "type": "selector",
+            "outbounds": [
+                "🇦🇪AE-5.44.42.121-443"
+            ]
+        },
+        {
+            "tag": "🇦🇺 Australia Nodes - Auto Select",
+            "type": "selector",
+            "outbounds": [
+                "🇦🇺AU-104.28.154.171-443"
+            ]
+        },
+        {
+            "tag": "🇧🇪 Belgium Nodes - Auto Select",
+            "type": "selector",
+            "outbounds": [
+                "🇧🇪BE-95.164.62.231-443"
+            ]
+        },
+        {
+            "tag": "🇩🇪 Germany Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇩🇪DE-116.203.47.128-29253",
+                "🇩🇪DE-195.248.241.99-43472",
+                "🇩🇪DE-8.222.212.172-443",
+                "🇩🇪DE-91.107.170.68-80"
+            ]
+        },
+        {
+            "tag": "🇫🇮 Finland Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇫🇮FI-45.159.249.213-443",
+                "🇫🇮FI-95.217.216.45-80"
+            ]
+        },
+        {
+            "tag": "🇫🇷 France Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇫🇷FR-104.28.211.187-443",
+                "🇫🇷FR-135.125.245.161-443",
+                "🇫🇷FR-152.228.242.193-443",
+                "🇫🇷FR-162.19.242.59-443",
+                "🇫🇷FR-176.31.25.244-443",
+                "🇫🇷FR-57.128.25.100-443"
+            ]
+        },
+        {
+            "tag": "🇬🇧 United Kingdom Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇬🇧GB-104.28.154.112-2053",
+                "🇬🇧GB-104.28.157.125-80",
+                "🇬🇧GB-104.28.159.140-80",
+                "🇬🇧GB-104.28.159.194-80",
+                "🇬🇧GB-104.28.160.255-443",
+                "🇬🇧GB-104.28.161.2-80",
+                "🇬🇧GB-143.47.241.46-16097",
+                "🇬🇧GB-46.226.162.42-443",
+                "🇬🇧GB-51.68.203.243-80",
+                "🇬🇧GB-57.128.164.43-443",
+                "🇬🇧GB-8.219.201.8-80",
+                "🇬🇧GB-8.222.138.164-80",
+                "🇬🇧GB-8.222.212.172-80"
+            ]
+        },
+        {
+            "tag": "🇭🇰 Hong Kong Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇭🇰HK-104.28.156.208-443",
+                "🇭🇰HK-47.243.92.199-3128",
+                "🇭🇰HK-47.76.40.192-38716",
+                "🇭🇰HK-47.76.44.200-14566",
+                "🇭🇰HK-47.76.46.251-30866",
+                "🇭🇰HK-47.76.48.165-39725",
+                "🇭🇰HK-47.76.51.74-57747",
+                "🇭🇰HK-8.217.121.58-28722",
+                "🇭🇰HK-8.217.209.11-37056",
+                "🇭🇰HK-8.217.21.92-56231",
+                "🇭🇰HK-8.217.210.78-46482",
+                "🇭🇰HK-8.217.226.145-31800",
+                "🇭🇰HK-8.217.5.14-57125",
+                "🇭🇰HK-8.218.13.189-44805",
+                "🇭🇰HK-8.219.5.10-443",
+                "🇭🇰HK-8.222.221.109-80"
+            ]
+        },
+        {
+            "tag": "🇮🇳 India Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "block"
+            ]
+        },
+        {
+            "tag": "🇯🇵 Japan Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇯🇵JP-104.28.157.28-19",
+                "🇯🇵JP-104.28.157.32-80",
+                "🇯🇵JP-104.28.157.43-25647",
+                "🇯🇵JP-104.28.157.44-2053",
+                "🇯🇵JP-104.28.158.59-2053",
+                "🇯🇵JP-8.222.249.98-37992"
+            ]
+        },
+        {
+            "tag": "🇰🇷 South Korea Nodes - Auto Select",
+            "type": "selector",
+            "outbounds": [
+                "🇰🇷KR-104.28.164.12-12305"
+            ]
+        },
+        {
+            "tag": "🇲🇾 Malaysia Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "block"
+            ]
+        },
+        {
+            "tag": "🇳🇱 Netherlands Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇳🇱NL-104.28.155.235-8443",
+                "🇳🇱NL-83.147.43.2-8443"
+            ]
+        },
+        {
+            "tag": "🇸🇪 Sweden Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "block"
+            ]
+        },
+        {
+            "tag": "🇸🇬 Singapore Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇸🇬SG-104.28.160.166-443",
+                "🇸🇬SG-54.169.189.194-443",
+                "🇸🇬SG-8.222.244.123-8443"
+            ]
+        },
+        {
+            "tag": "🇹🇷 Turkey Nodes - Auto Select",
+            "type": "selector",
+            "outbounds": [
+                "🇹🇷TR-89.43.31.134-3128"
+            ]
+        },
+        {
+            "tag": "🇹🇼 Taiwan Nodes - Auto Select",
+            "type": "selector",
+            "outbounds": [
+                "🇹🇼TW-104.28.159.157-36633"
+            ]
+        },
+        {
+            "tag": "🇺🇸 United States Nodes - Auto Select",
+            "type": "urltest",
+            "url": "https://www.google.com/generate_204",
+            "interval": "5m",
+            "tolerance": 50,
+            "outbounds": [
+                "🇺🇸US-103.35.189.118-443",
+                "🇺🇸US-104.168.62.130-7890",
+                "🇺🇸US-104.28.152.165-80",
+                "🇺🇸US-104.28.152.171-80",
+                "🇺🇸US-104.28.152.186-80",
+                "🇺🇸US-104.28.152.187-443",
+                "🇺🇸US-104.28.153.4-80",
+                "🇺🇸US-104.28.154.28-8443",
+                "🇺🇸US-104.28.157.105-80",
+                "🇺🇸US-104.28.157.116-80",
+                "🇺🇸US-104.28.158.228-80",
+                "🇺🇸US-104.28.158.92-443",
+                "🇺🇸US-104.28.161.23-34237",
+                "🇺🇸US-109.104.152.101-13982",
+                "🇺🇸US-142.171.30.222-19987",
+                "🇺🇸US-154.12.243.152-443",
+                "🇺🇸US-173.234.25.54-1992",
+                "🇺🇸US-174.77.111.196-4145",
+                "🇺🇸US-174.77.111.197-4145",
+                "🇺🇸US-184.170.249.65-4145",
+                "🇺🇸US-184.181.217.213-4145",
+                "🇺🇸US-38.114.114.193-5601",
+                "🇺🇸US-5.161.223.122-80",
+                "🇺🇸US-5.78.101.178-80",
+                "🇺🇸US-72.195.34.42-4145",
+                "🇺🇸US-8.219.237.250-36633"
+            ]
+        },
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "dns",
+            "tag": "dns-out"
+        },
+        {
+            "type": "block",
+            "tag": "block"
+        },
+        {
+            "tag": "File Creation Time: Fri Apr 26 20:15:32 UTC 2024",
+            "type": "vmess",
+            "server": "255.255.255.255",
+            "server_port": 10086,
+            "uuid": "00000000-0000-0000-0000-000000000000",
+            "security": "auto",
+            "alter_id": 0,
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇦🇪AE-5.44.42.121-443",
+            "type": "vless",
+            "server": "5.44.42.121",
+            "server_port": 443,
+            "uuid": "a9a5c647-8f59-454c-a5b1-a1c198e4ac1e",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "amazon.oapdis.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "safari"
+                }
+            }
+        },
+        {
+            "tag": "🇦🇺AU-104.28.154.171-443",
+            "type": "vless",
+            "server": "140.238.195.98",
+            "server_port": 443,
+            "uuid": "38a2070d-a256-48f3-891b-c9b68b01c8f7",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "jd.wxgqlfx.top"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "jd.wxgqlfx.top"
+                }
+            }
+        },
+        {
+            "tag": "🇧🇪BE-95.164.62.231-443",
+            "type": "vless",
+            "server": "172.67.171.93",
+            "server_port": 443,
+            "uuid": "dfe07813-814e-4cfd-b38d-d508c13657f8",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "be1-vless.sshmax.xyz"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/vless",
+                "headers": {
+                    "Host": "be1-vless.sshmax.xyz"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪DE-116.203.47.128-29253",
+            "type": "vless",
+            "server": "::ffff:74cb:2f80",
+            "server_port": 29253,
+            "uuid": "f5512b61-d706-4438-8d03-1817f0aba9e0",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "canva.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "eS-KEoBKsWjjBTpMY6kr5eZbre-UPBGAiqmeNPLRkXg",
+                    "short_id": "5038468e"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪DE-195.248.241.99-43472",
+            "type": "vless",
+            "server": "195.248.241.99",
+            "server_port": 43472,
+            "uuid": "96c80204-471a-4be7-a56c-7fb5be1f87b7",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision"
+        },
+        {
+            "tag": "🇩🇪DE-8.222.212.172-443",
+            "type": "vless",
+            "server": "104.18.127.77",
+            "server_port": 443,
+            "uuid": "e4e7b149-8bd8-4266-8cbb-0987604dbc87",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "toujiediansigema.5112233.xyz",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "TG@juzibaipiao偷节点死吗",
+                "headers": {
+                    "Host": "toujiediansigema.5112233.xyz"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪DE-91.107.170.68-80",
+            "type": "vless",
+            "server": "91.107.170.68",
+            "server_port": 80,
+            "uuid": "1ca7d3a9-6b3e-47ed-88a7-ccbd1ff927c6",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "/backup",
+                "headers": {
+                    "Host": "internet.life.com.by"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇮FI-45.159.249.213-443",
+            "type": "vless",
+            "server": "172.67.194.57",
+            "server_port": 443,
+            "uuid": "1728eaf8-7d0b-43c6-8125-9db3b680d17e",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "fi2-vless.sshmax.xyz"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/vless",
+                "headers": {
+                    "Host": "fi2-vless.sshmax.xyz"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇮FI-95.217.216.45-80",
+            "type": "vless",
+            "server": "ir.iu3.shopiiiiing.cfd",
+            "server_port": 80,
+            "uuid": "edde0111-9ba9-402e-9c74-e16a9d0186bf",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "ifi1.kaghazacharrangi.sbs"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷FR-104.28.211.187-443",
+            "type": "vless",
+            "server": "104.16.61.8",
+            "server_port": 443,
+            "uuid": "4804f14b-c1f8-452d-a6ec-eff1490aeac9",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "hdfy6d1.foriran.trade",
+                "alpn": [
+                    "http/1.1"
+                ]
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/Bc5xLs413y7DNJYMWXN7kCm3lL",
+                "headers": {
+                    "Host": "hdfy6d1.foriran.trade"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷FR-135.125.245.161-443",
+            "type": "vless",
+            "server": "return.footballlovernews.com",
+            "server_port": 443,
+            "uuid": "83a306b9-7ead-49db-a60a-b09588b517bd",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "return.footballlovernews.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/return"
+            }
+        },
+        {
+            "tag": "🇫🇷FR-152.228.242.193-443",
+            "type": "vless",
+            "server": "tana.minusober.com",
+            "server_port": 443,
+            "uuid": "0fdd8743-50fe-4615-ba4d-be3bd6d98cb3",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "tana.minusober.com",
+                "alpn": [
+                    "h2",
+                    "http/1.1"
+                ],
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/tana"
+            }
+        },
+        {
+            "tag": "🇫🇷FR-162.19.242.59-443",
+            "type": "vless",
+            "server": "104.16.61.8",
+            "server_port": 443,
+            "uuid": "b13399cb-bbdb-4476-b408-e9670391fb36",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "parspack.allhub.shop",
+                "alpn": [
+                    "http/1.1"
+                ]
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/cdn",
+                "headers": {
+                    "Host": "de-03p.allhub.shop"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷FR-176.31.25.244-443",
+            "type": "vless",
+            "server": "176.31.25.244",
+            "server_port": 443,
+            "uuid": "216eecb0-74c3-438f-a266-91d067ff5d69",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "http",
+                "host": "www.speedtest.net",
+                "method": "GET",
+                "path": "/"
+            }
+        },
+        {
+            "tag": "🇫🇷FR-57.128.25.100-443",
+            "type": "vless",
+            "server": "pikk.minusober.com",
+            "server_port": 443,
+            "uuid": "db1eeace-797f-4d75-ac27-9a97acda853d",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "pikk.minusober.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/pikk"
+            }
+        },
+        {
+            "tag": "🇬🇧GB-104.28.154.112-2053",
+            "type": "vless",
+            "server": "64.94.86.184",
+            "server_port": 2053,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "a.ssll.gay"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                }
+            }
+        },
+        {
+            "tag": "🇬🇧GB-104.28.157.125-80",
+            "type": "vless",
+            "server": "206.238.236.22",
+            "server_port": 80,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                }
+            }
+        },
+        {
+            "tag": "🇬🇧GB-104.28.159.140-80",
+            "type": "vless",
+            "server": "64.94.86.147",
+            "server_port": 80,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                }
+            }
+        },
+        {
+            "tag": "🇬🇧GB-104.28.159.194-80",
+            "type": "vless",
+            "server": "206.238.237.30",
+            "server_port": 80,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                }
+            }
+        },
+        {
+            "tag": "🇬🇧GB-104.28.160.255-443",
+            "type": "vless",
+            "server": "217.163.76.88",
+            "server_port": 443,
+            "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "cfed.tgzdyz2.top",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "TG@ZDYZ2",
+                "headers": {
+                    "Host": "cfed.tgzdyz2.top"
+                }
+            }
+        },
+        {
+            "tag": "🇬🇧GB-104.28.161.2-80",
+            "type": "vless",
+            "server": "160.123.255.226",
+            "server_port": 80,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                }
+            }
+        },
+        {
+            "tag": "🇬🇧GB-143.47.241.46-16097",
+            "type": "vless",
+            "server": "143.47.241.46",
+            "server_port": 16097,
+            "uuid": "378387d5-4370-4e38-9661-25796e8630ba",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "www.amazon.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "qMH_7IYKzR0mOLN35mnQijwzN8IiWdudhryTHaQzWS0"
+                }
+            }
+        },
+        {
+            "tag": "🇬🇧GB-46.226.162.42-443",
+            "type": "vless",
+            "server": "46.226.162.42",
+            "server_port": 443,
+            "uuid": "130a1c25-e0f0-4a43-9e2c-6d4ce6290681",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "gbr01.abvpn.ru",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/websocket"
+            }
+        },
+        {
+            "tag": "🇬🇧GB-51.68.203.243-80",
+            "type": "vless",
+            "server": "104.31.16.161",
+            "server_port": 80,
+            "uuid": "7749a882-27cf-40f1-c90e-fd2040e46f60",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "headers": {
+                    "Host": "bpi.ir.bankmellat.ir.ilna.ir.jobinja.ir.iro.ir.karafarinbank.ir.mche.or.ir.cbi.ir.iran.gov.ir.khamenei.ir.esam.ir.bahesab.ir.ponisha.ir.parsian-bank.ir.refah-bank.ir.ime.ac.ir.irna.ir.bank-maskan.ir.bmi.ir.iauh.ac.ir.ebanksepah.ir.mahtabighadimi.sbs."
+                }
+            }
+        },
+        {
+            "tag": "🇬🇧GB-57.128.164.43-443",
+            "type": "vless",
+            "server": "104.21.40.63",
+            "server_port": 443,
+            "uuid": "ff3c4db3-2259-479e-a0e0-7af7d1d429db",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "shaliest.toptechnonews.com"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/nimws",
+                "headers": {
+                    "Host": "shaliest.toptechnonews.com"
+                }
+            }
+        },
+        {
+            "tag": "🇬🇧GB-8.219.201.8-80",
+            "type": "vless",
+            "server": "130.250.137.196",
+            "server_port": 80,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                }
+            }
+        },
+        {
+            "tag": "🇬🇧GB-8.222.138.164-80",
+            "type": "vless",
+            "server": "64.94.86.184",
+            "server_port": 80,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                }
+            }
+        },
+        {
+            "tag": "🇬🇧GB-8.222.212.172-80",
+            "type": "vless",
+            "server": "130.250.137.70",
+            "server_port": 80,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK-104.28.156.208-443",
+            "type": "vless",
+            "server": "103.44.255.27",
+            "server_port": 443,
+            "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "cfed.tgzdyz2.top",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "TG@ZDYZ2",
+                "headers": {
+                    "Host": "cfed.tgzdyz2.top"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK-47.243.92.199-3128",
+            "type": "http",
+            "tls": {
+                "enabled": true,
+                "insecure": true
+            },
+            "server": "47.243.92.199",
+            "server_port": 3128
+        },
+        {
+            "tag": "🇭🇰HK-47.76.40.192-38716",
+            "type": "vless",
+            "server": "47.76.40.192",
+            "server_port": 38716,
+            "uuid": "65705e16-6d87-4981-bbe5-6c5051bf18e9",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "www.icloud.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "UtL7E0Gmxj3X5JdcPAutpTRKo7K2hugkR0vwk2XroUM"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK-47.76.44.200-14566",
+            "type": "vless",
+            "server": "47.76.44.200",
+            "server_port": 14566,
+            "uuid": "f2d8cde4-ef7d-49e8-f518-33497f61be35",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "swdist.apple.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "g1f1wLjim5gOVGnI5LGUV0dL4iFXPoiepOPZfSxJe14"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK-47.76.46.251-30866",
+            "type": "vless",
+            "server": "47.76.46.251",
+            "server_port": 30866,
+            "uuid": "01c1b206-9f71-4c47-f634-b5c861bc23eb",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "swdist.apple.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "4comh-7Jm_wZXJQ5QiLSCbVGQIbMUzHUIBdb0aFtLzM"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK-47.76.48.165-39725",
+            "type": "vless",
+            "server": "47.76.48.165",
+            "server_port": 39725,
+            "uuid": "29cde160-39ce-4bcd-aa44-46b2c356eba7",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "swdist.apple.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "R2gKMF0Tetlnesc1pPkZH9NaOeehw-f5_U9JKG_cLjU"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK-47.76.51.74-57747",
+            "type": "vless",
+            "server": "47.76.51.74",
+            "server_port": 57747,
+            "uuid": "a17efd42-11d2-4a76-bc35-a34c6c0ffd70",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "www.icloud.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "UK7qxWWGfRQcQfwaGpHnqmmqqJBut4jxve8AeDDJ2UI"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK-8.217.121.58-28722",
+            "type": "vless",
+            "server": "8.217.121.58",
+            "server_port": 28722,
+            "uuid": "d890cd9d-7f55-4215-8634-464220c4786d",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "swdist.apple.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "UK7qxWWGfRQcQfwaGpHnqmmqqJBut4jxve8AeDDJ2UI"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK-8.217.209.11-37056",
+            "type": "vless",
+            "server": "8.217.209.11",
+            "server_port": 37056,
+            "uuid": "aae915a8-34bb-49e3-b1df-af104b46a06f",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "www.icloud.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK-8.217.21.92-56231",
+            "type": "vless",
+            "server": "8.217.21.92",
+            "server_port": 56231,
+            "uuid": "5fe3dcc7-7221-4961-8aeb-9c404ca20a27",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "www.icloud.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "g1f1wLjim5gOVGnI5LGUV0dL4iFXPoiepOPZfSxJe14"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK-8.217.210.78-46482",
+            "type": "vless",
+            "server": "8.217.210.78",
+            "server_port": 46482,
+            "uuid": "318a3535-3e2c-4307-9d21-f933ff89d986",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "swdist.apple.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "g1f1wLjim5gOVGnI5LGUV0dL4iFXPoiepOPZfSxJe14"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK-8.217.226.145-31800",
+            "type": "vless",
+            "server": "8.217.226.145",
+            "server_port": 31800,
+            "uuid": "8d901d39-f250-46fd-db03-77276961adbe",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "swdist.apple.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "R2gKMF0Tetlnesc1pPkZH9NaOeehw-f5_U9JKG_cLjU"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK-8.217.5.14-57125",
+            "type": "vless",
+            "server": "8.217.5.14",
+            "server_port": 57125,
+            "uuid": "7df20bf5-a7bb-4c4e-b412-491c07aa63e8",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "www.icloud.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "S-g0oP36DShii1uPOnZDSEhp_wQghX6h68PgMivOmD4"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK-8.218.13.189-44805",
+            "type": "vless",
+            "server": "8.218.13.189",
+            "server_port": 44805,
+            "uuid": "3b2d80f3-2387-440c-8490-a743fb84c3bb",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "swdist.apple.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "R2gKMF0Tetlnesc1pPkZH9NaOeehw-f5_U9JKG_cLjU"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK-8.219.5.10-443",
+            "type": "vless",
+            "server": "123.58.212.234",
+            "server_port": 443,
+            "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "cfed.tgzdyz2.top",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "TG@ZDYZ2",
+                "headers": {
+                    "Host": "cfed.tgzdyz2.top"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK-8.222.221.109-80",
+            "type": "vless",
+            "server": "34.95.126.8",
+            "server_port": 80,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "Telegram🇨🇳 @WangCai2 /",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                },
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2048
+            }
+        },
+        {
+            "tag": "🇯🇵JP-104.28.157.28-19",
+            "type": "vless",
+            "server": "146.56.151.32",
+            "server_port": 19,
+            "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "cfed.tgzdyz2.top",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "TG@ZDYZ2",
+                "headers": {
+                    "Host": "cfed.tgzdyz2.top"
+                }
+            }
+        },
+        {
+            "tag": "🇯🇵JP-104.28.157.32-80",
+            "type": "vless",
+            "server": "151.101.192.144",
+            "server_port": 80,
+            "uuid": "cefffd1d-cc58-4560-b4d1-44f1af528f30",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "/?ed",
+                "headers": {
+                    "Host": "k.kp"
+                }
+            }
+        },
+        {
+            "tag": "🇯🇵JP-104.28.157.43-25647",
+            "type": "vless",
+            "server": "221.161.19.212",
+            "server_port": 25647,
+            "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "cfed.tgzdyz2.top",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "TG@ZDYZ2",
+                "headers": {
+                    "Host": "cfed.tgzdyz2.top"
+                }
+            }
+        },
+        {
+            "tag": "🇯🇵JP-104.28.157.44-2053",
+            "type": "vless",
+            "server": "176.97.73.99",
+            "server_port": 2053,
+            "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "cfed.tgzdyz2.top",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "TG@ZDYZ2",
+                "headers": {
+                    "Host": "cfed.tgzdyz2.top"
+                }
+            }
+        },
+        {
+            "tag": "🇯🇵JP-104.28.158.59-2053",
+            "type": "vless",
+            "server": "176.97.73.99",
+            "server_port": 2053,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "a.ssll.gay",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "Telegram🇨🇳 @WangCai2 /",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                },
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2048
+            }
+        },
+        {
+            "tag": "🇯🇵JP-8.222.249.98-37992",
+            "type": "vless",
+            "server": "119.17.25.40",
+            "server_port": 37992,
+            "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "cfed.tgzdyz2.top",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "TG@ZDYZ2",
+                "headers": {
+                    "Host": "cfed.tgzdyz2.top"
+                }
+            }
+        },
+        {
+            "tag": "🇰🇷KR-104.28.164.12-12305",
+            "type": "vless",
+            "server": "59.7.41.44",
+            "server_port": 12305,
+            "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "cfed.tgzdyz2.top"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "TG@ZDYZ2",
+                "headers": {
+                    "Host": "cfed.tgzdyz2.top"
+                }
+            }
+        },
+        {
+            "tag": "🇳🇱NL-104.28.155.235-8443",
+            "type": "vless",
+            "server": "38.180.18.207",
+            "server_port": 8443,
+            "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "cfed.tgzdyz2.top"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "tg@zdyz2",
+                "headers": {
+                    "Host": "cfed.tgzdyz2.top"
+                }
+            }
+        },
+        {
+            "tag": "🇳🇱NL-83.147.43.2-8443",
+            "type": "vless",
+            "server": "38.180.18.207",
+            "server_port": 8443,
+            "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "mositr.freenods.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "mositr.freenods.sbs"
+                }
+            }
+        },
+        {
+            "tag": "🇸🇬SG-104.28.160.166-443",
+            "type": "vless",
+            "server": "13.250.131.37",
+            "server_port": 443,
+            "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "cfed.tgzdyz2.top"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "tg@zdyz2",
+                "headers": {
+                    "Host": "cfed.tgzdyz2.top"
+                }
+            }
+        },
+        {
+            "tag": "🇸🇬SG-54.169.189.194-443",
+            "type": "shadowsocks",
+            "server": "54.169.189.194",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "amazonskr05"
+        },
+        {
+            "tag": "🇸🇬SG-8.222.244.123-8443",
+            "type": "vless",
+            "server": "139.162.9.77",
+            "server_port": 8443,
+            "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "cfed.tgzdyz2.top",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "TG@ZDYZ2",
+                "headers": {
+                    "Host": "cfed.tgzdyz2.top"
+                }
+            }
+        },
+        {
+            "tag": "🇹🇷TR-89.43.31.134-3128",
+            "type": "http",
+            "tls": {
+                "enabled": true,
+                "insecure": true
+            },
+            "server": "89.43.31.134",
+            "server_port": 3128
+        },
+        {
+            "tag": "🇹🇼TW-104.28.159.157-36633",
+            "type": "vless",
+            "server": "61.220.41.143",
+            "server_port": 36633,
+            "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "cfed.tgzdyz2.top",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "TG@ZDYZ2",
+                "headers": {
+                    "Host": "cfed.tgzdyz2.top"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US-103.35.189.118-443",
+            "type": "vless",
+            "server": "172.67.170.93",
+            "server_port": 443,
+            "uuid": "d0be39fd-4bca-4e37-80d5-715d512aad7e",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "server17.aibox.tv",
+                "alpn": [
+                    "h2",
+                    "http/1.1"
+                ],
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/ws/",
+                "headers": {
+                    "Host": "server17.aibox.tv"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US-104.168.62.130-7890",
+            "type": "http",
+            "tls": {
+                "enabled": true,
+                "insecure": true
+            },
+            "server": "104.168.62.130",
+            "server_port": 7890
+        },
+        {
+            "tag": "🇺🇸US-104.28.152.165-80",
+            "type": "vless",
+            "server": "162.159.58.165",
+            "server_port": 80,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US-104.28.152.171-80",
+            "type": "vless",
+            "server": "162.159.58.174",
+            "server_port": 80,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US-104.28.152.186-80",
+            "type": "vless",
+            "server": "162.159.58.214",
+            "server_port": 80,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US-104.28.152.187-443",
+            "type": "vless",
+            "server": "172.67.234.48",
+            "server_port": 443,
+            "uuid": "cab438c4-9c5a-43fd-a623-ce81cb93085c",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "hk.twittei.link"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "hk.twittei.link"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US-104.28.153.4-80",
+            "type": "vless",
+            "server": "104.21.238.133",
+            "server_port": 80,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US-104.28.154.28-8443",
+            "type": "vless",
+            "server": "159.65.165.75",
+            "server_port": 8443,
+            "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "cfed.tgzdyz2.top",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "TG@ZDYZ2",
+                "headers": {
+                    "Host": "cfed.tgzdyz2.top"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US-104.28.157.105-80",
+            "type": "vless",
+            "server": "162.159.58.66",
+            "server_port": 80,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US-104.28.157.116-80",
+            "type": "vless",
+            "server": "162.159.58.147",
+            "server_port": 80,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US-104.28.158.228-80",
+            "type": "vless",
+            "server": "45.80.110.234",
+            "server_port": 80,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "Twitter苏小柠",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US-104.28.158.92-443",
+            "type": "vless",
+            "server": "tg.wxgqlfx.top",
+            "server_port": 443,
+            "uuid": "38a2070d-a256-48f3-891b-c9b68b01c8f7",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "jd.wxgqlfx.top"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "jd.wxgqlfx.top"
+                },
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2048
+            }
+        },
+        {
+            "tag": "🇺🇸US-104.28.161.23-34237",
+            "type": "vless",
+            "server": "45.251.240.229",
+            "server_port": 34237,
+            "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "a.ssll.gay",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "Telegram🇨🇳 @WangCai_8 /",
+                "headers": {
+                    "Host": "a.ssll.gay"
+                },
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2048
+            }
+        },
+        {
+            "tag": "🇺🇸US-109.104.152.101-13982",
+            "type": "vless",
+            "server": "109.104.152.101",
+            "server_port": 13982,
+            "uuid": "85beb960-236b-4634-81ce-6ad66652f928",
+            "packet_encoding": "xudp",
+            "flow": "None",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "itunes.apple.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "HjmsLPRaQqSqtdMMpIpmpoJOKhC0rAOUCHXnz0E89RE",
+                    "short_id": "22f6b74f02cc88a6"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US-142.171.30.222-19987",
+            "type": "hysteria2",
+            "server": "142.171.30.222",
+            "server_port": 19987,
+            "password": "4984806b-f0f9-4749-bdd5-ea38bd690270",
+            "up_mbps": 10,
+            "down_mbps": 100,
+            "tls": {
+                "enabled": true,
+                "insecure": true
+            }
+        },
+        {
+            "tag": "🇺🇸US-154.12.243.152-443",
+            "type": "vless",
+            "server": "zen3.xpartshub.com",
+            "server_port": 443,
+            "uuid": "325732d7-4f00-4d80-8278-39ed3431cf04",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "zen3.xpartshub.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/yfkq7cnPxOnK24VV7H"
+            }
+        },
+        {
+            "tag": "🇺🇸US-173.234.25.54-1992",
+            "type": "hysteria",
+            "server": "173.234.25.50",
+            "server_port": 1992,
+            "up_mbps": 11,
+            "down_mbps": 55,
+            "auth_str": "dongtaiwang.com",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "alpn": [
+                    "h3"
+                ],
+                "server_name": "bing.com"
+            }
+        },
+        {
+            "tag": "🇺🇸US-174.77.111.196-4145",
+            "type": "socks",
+            "version": "5",
+            "server": "174.77.111.196",
+            "server_port": 4145
+        },
+        {
+            "tag": "🇺🇸US-174.77.111.197-4145",
+            "type": "socks",
+            "version": "5",
+            "server": "174.77.111.197",
+            "server_port": 4145
+        },
+        {
+            "tag": "🇺🇸US-184.170.249.65-4145",
+            "type": "socks",
+            "version": "5",
+            "server": "184.170.249.65",
+            "server_port": 4145
+        },
+        {
+            "tag": "🇺🇸US-184.181.217.213-4145",
+            "type": "socks",
+            "version": "5",
+            "server": "184.181.217.213",
+            "server_port": 4145
+        },
+        {
+            "tag": "🇺🇸US-38.114.114.193-5601",
+            "type": "shadowsocks",
+            "server": "38.114.114.193",
+            "server_port": 5601,
+            "method": "aes-256-gcm",
+            "password": "Y6R9pAtvxxzmGC"
+        },
+        {
+            "tag": "🇺🇸US-5.161.223.122-80",
+            "type": "vless",
+            "server": "104.21.229.0",
+            "server_port": 80,
+            "uuid": "c6ea407d-9f3f-4625-9dda-401837f0f68f",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "iud1.kaghazacharrangi.sbs"
+                },
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2048
+            }
+        },
+        {
+            "tag": "🇺🇸US-5.78.101.178-80",
+            "type": "vless",
+            "server": "104.21.20.148",
+            "server_port": 80,
+            "uuid": "b8f8ecd4-b3f1-4945-ad90-6953aa48f083",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "transport": {
+                "type": "ws",
+                "path": "/backup",
+                "headers": {
+                    "Host": "Eg6bl0RXEH2ZxrKawkOx.mAhdAviAt.uK"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US-72.195.34.42-4145",
+            "type": "socks",
+            "version": "5",
+            "server": "72.195.34.42",
+            "server_port": 4145
+        },
+        {
+            "tag": "🇺🇸US-8.219.237.250-36633",
+            "type": "vless",
+            "server": "61.220.41.143",
+            "server_port": 36633,
+            "uuid": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+            "packet_encoding": "xudp",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "cfed.tgzdyz2.top",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "TG@ZDYZ2",
+                "headers": {
+                    "Host": "cfed.tgzdyz2.top"
+                }
+            }
+        }
+    ],
+    "route": {
+        "auto_detect_interface": true,
+        "final": "🐟 Remaining Website",
+        "rules": [
+            {
+                "protocol": "dns",
+                "outbound": "dns-out"
+            },
+            {
+                "clash_mode": "direct",
+                "outbound": "direct"
+            },
+            {
+                "clash_mode": "global",
+                "outbound": "🚀 Node Group - 1"
+            },
+            {
+                "rule_set": "LocalAreaNetwork",
+                "outbound": "🎯 China Website"
+            },
+            {
+                "rule_set": "OpenAI",
+                "outbound": "🤖 OpenAI"
+            },
+            {
+                "rule_set": "Claude",
+                "outbound": "🤖 Claude"
+            },
+            {
+                "rule_set": "Gemini",
+                "outbound": "🤖 Gemini"
+            },
+            {
+                "rule_set": "Bing",
+                "outbound": "🤖 New Bing"
+            },
+            {
+                "rule_set": "Microsoft",
+                "outbound": "Ⓜ️ Microsoft"
+            },
+            {
+                "rule_set": "Apple",
+                "outbound": "🍎 Apple"
+            },
+            {
+                "rule_set": "Game",
+                "outbound": "🎮 Global Game"
+            },
+            {
+                "rule_set": "Scholar",
+                "outbound": "📖 Global Scholar"
+            },
+            {
+                "rule_set": "Netflix",
+                "outbound": "🎥 Netflix"
+            },
+            {
+                "rule_set": "Disney",
+                "outbound": "🎥 Disney+"
+            },
+            {
+                "rule_set": "PrimeVideo",
+                "outbound": "🎥 Prime Video"
+            },
+            {
+                "rule_set": "HBO",
+                "outbound": "🎥 HBO Max"
+            },
+            {
+                "rule_set": "ParamountPlus",
+                "outbound": "🎥 Paramount+"
+            },
+            {
+                "rule_set": "TikTok",
+                "outbound": "🎥 TikTok"
+            },
+            {
+                "rule_set": "Spotify",
+                "outbound": "🎥 Spotify"
+            },
+            {
+                "rule_set": "ProxyMedia",
+                "outbound": "🌍 Global Media"
+            },
+            {
+                "rule_set": "ChinaMedia",
+                "outbound": "🌏 China Media"
+            },
+            {
+                "rule_set": "ChinaDomain",
+                "outbound": "🎯 China Website"
+            },
+            {
+                "rule_set": "ProxyGFW",
+                "outbound": "🧱 Global Website"
+            },
+            {
+                "rule_set": "Global",
+                "outbound": "🐟 Remaining Website"
+            },
+            {
+                "rule_set": "Download",
+                "outbound": "🎯 China Website"
+            },
+            {
+                "rule_set": "ChinaIPv4",
+                "outbound": "🎯 China Website"
+            },
+            {
+                "rule_set": "ChinaIPv6",
+                "outbound": "🎯 China Website"
+            }
+        ],
+        "rule_set": [
+            {
+                "tag": "LocalAreaNetwork",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/LocalAreaNetwork.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "OpenAI",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/OpenAI.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "Claude",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/Claude.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "Gemini",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/Gemini.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "Bing",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/Bing.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "Microsoft",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/Microsoft.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "Apple",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/Apple.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "Game",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/Game.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "Scholar",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/Scholar.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "Netflix",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/Netflix.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "Disney",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/Disney.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "PrimeVideo",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/PrimeVideo.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "HBO",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/HBO.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "ParamountPlus",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/ParamountPlus.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "TikTok",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/TikTok.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "Spotify",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/Spotify.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "ProxyMedia",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/ProxyMedia.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "ChinaMedia",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/ChinaMedia.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "ChinaDomain",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/ChinaDomain.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "ProxyGFW",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/ProxyGFW.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "Global",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/Global.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "Download",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/Download.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "ChinaIPv4",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/ChinaIPv4.json",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "ChinaIPv6",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/thuhollow2/rule/main/Sing-Box/ChinaIPv6.json",
+                "download_detour": "direct"
+            }
+        ]
+    }
+}
