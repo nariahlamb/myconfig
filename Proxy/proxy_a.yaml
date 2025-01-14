@@ -1,0 +1,8 @@
+proxies:
+  - {"name": "File Creation Time: Tue Jan 14 23:11:24 UTC 2025", "server": "255.255.255.255", "port": 10086, "type": "vmess", "alterId": 0, "cipher": "auto", "skip-cert-verify": true, "tls": false, "udp": true, "uuid": "00000000-0000-0000-0000-000000000000"}
+  - {"name": "🇬🇧GB-101.200.158.109-8800", "server": "101.200.158.109", "port": 8800, "type": "socks5", "client-fingerprint": "chrome", "skip-cert-verify": true, "udp": true}
+  - {"name": "🇭🇰HK-47.243.92.199-3128", "server": "47.243.92.199", "port": 3128, "type": "http", "skip-cert-verify": true, "tls": false, "udp": true}
+  - {"name": "🇸🇬SG-134.122.133.144-46602", "server": "183.236.51.23", "port": 46602, "type": "vmess", "alterId": 64, "cipher": "none", "network": "tcp", "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24", "ws-opts": {}}
+  - {"name": "🇺🇸US-199.116.114.11-4145", "server": "199.116.114.11", "port": 4145, "type": "socks5", "skip-cert-verify": true, "udp": true}
+  - {"name": "🇺🇸US-199.58.185.9-4145", "server": "199.58.185.9", "port": 4145, "type": "socks5", "skip-cert-verify": true, "udp": true}
+  - {"name": "🇺🇸US-98.191.0.37-4145", "server": "98.191.0.37", "port": 4145, "type": "socks5", "skip-cert-verify": true, "udp": true}
