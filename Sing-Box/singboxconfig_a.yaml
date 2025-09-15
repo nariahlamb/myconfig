@@ -9,7 +9,7 @@
                 "tag": "remote",
                 "type": "https",
                 "server": "1.0.0.1",
-                "detour": "♻️ All Nodes Except CN - Auto Select"
+                "detour": "🧱 Global Website"
             },
             {
                 "tag": "local",
