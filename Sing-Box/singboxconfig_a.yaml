@@ -175,8 +175,9 @@
     "outbounds": [
         {
             "tag": "reject",
-            "type": "direct"
-        }
+            "type": "selector",
+            "outbounds": []
+        },
         {
             "tag": "🚀 Node Group - 1",
             "type": "selector",
