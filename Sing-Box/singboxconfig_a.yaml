@@ -177,7 +177,7 @@
             "tag": "reject",
             "type": "http",
             "server": "255.255.255.255",
-            "server_port": "10086"
+            "server_port": 10086
         },
         {
             "tag": "🚀 Node Group - 1",
