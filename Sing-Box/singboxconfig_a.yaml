@@ -1,50 +1,30 @@
 {
     "log": {
-        "level": "debug",
+        "level": "info",
         "timestamp": true
-    },
-    "experimental": {
-        "clash_api": {
-            "external_controller": "127.0.0.1:9090",
-            "external_ui": "ui",
-            "secret": "",
-            "default_mode": "rule"
-        },
-        "cache_file": {
-            "enabled": true,
-            "store_fakeip": false
-        }
     },
     "dns": {
         "servers": [
             {
-                "address": "1.0.0.1",
-                "detour": "proxy",
-                "tag": "proxy"
+                "tag": "remote",
+                "type": "https",
+                "server": "1.0.0.1",
+                "detour": "♻️ All Nodes Except CN - Auto Select"
             },
             {
-                "address": "223.5.5.5",
-                "detour": "direct",
-                "tag": "local"
-            },
-            {
-                "address": "rcode://success",
-                "tag": "reject"
+                "tag": "local",
+                "type": "https",
+                "server": "223.5.5.5"
             }
         ],
         "rules": [
-            {
-                "outbound": "any",
-                "server": "local",
-                "disable_cache": true
-            },
             {
                 "clash_mode": "direct",
                 "server": "local"
             },
             {
                 "clash_mode": "global",
-                "server": "proxy"
+                "server": "remote"
             },
             {
                 "rule_set": "LocalAreaNetwork",
@@ -52,19 +32,19 @@
             },
             {
                 "rule_set": "OpenAI",
-                "server": "proxy"
+                "server": "remote"
             },
             {
                 "rule_set": "Claude",
-                "server": "proxy"
+                "server": "remote"
             },
             {
                 "rule_set": "Gemini",
-                "server": "proxy"
+                "server": "remote"
             },
             {
                 "rule_set": "Bing",
-                "server": "proxy"
+                "server": "remote"
             },
             {
                 "rule_set": "Microsoft",
@@ -84,35 +64,35 @@
             },
             {
                 "rule_set": "Netflix",
-                "server": "proxy"
+                "server": "remote"
             },
             {
                 "rule_set": "Disney",
-                "server": "proxy"
+                "server": "remote"
             },
             {
                 "rule_set": "PrimeVideo",
-                "server": "proxy"
+                "server": "remote"
             },
             {
                 "rule_set": "HBO",
-                "server": "proxy"
+                "server": "remote"
             },
             {
                 "rule_set": "ParamountPlus",
-                "server": "proxy"
+                "server": "remote"
             },
             {
                 "rule_set": "TikTok",
-                "server": "proxy"
+                "server": "remote"
             },
             {
                 "rule_set": "Spotify",
-                "server": "proxy"
+                "server": "remote"
             },
             {
                 "rule_set": "ProxyMedia",
-                "server": "proxy"
+                "server": "remote"
             },
             {
                 "rule_set": "ChinaMedia",
@@ -124,11 +104,11 @@
             },
             {
                 "rule_set": "ProxyGFW",
-                "server": "proxy"
+                "server": "remote"
             },
             {
                 "rule_set": "Global",
-                "server": "proxy"
+                "server": "remote"
             },
             {
                 "rule_set": "Download",
@@ -147,38 +127,21 @@
     },
     "inbounds": [
         {
+            "tag": "tun-in",
             "type": "tun",
-            "inet4_address": "172.19.0.1/30",
-            "inet6_address": "2001:0470:f9da:fdfa::1/64",
-            "mtu": 9000,
+            "address": ["172.19.0.1/30", "2001:0470:f9da:fdfa::1/64"],
             "auto_route": true,
-            "strict_route": true,
-            "sniff": true,
-            "endpoint_independent_nat": false,
-            "stack": "system",
-            "platform": {
-                "http_proxy": {
-                    "enabled": true,
-                    "server": "127.0.0.1",
-                    "server_port": 9080
-                }
-            }
+            "strict_route": true
         },
         {
+            "tag": "mixed-in",
             "type": "mixed",
             "listen": "127.0.0.1",
             "listen_port": 9080,
-            "sniff": true,
             "users": []
         }
     ],
     "outbounds": [
-        {
-            "tag": "reject",
-            "type": "http",
-            "server": "255.255.255.255",
-            "server_port": 10086
-        },
         {
             "tag": "🚀 Node Group - 1",
             "type": "selector",
@@ -2065,8 +2028,10 @@
             "tag": "direct"
         },
         {
-            "type": "dns",
-            "tag": "dns-out"
+            "tag": "reject",
+            "type": "http",
+            "server": "255.255.255.255",
+            "server_port": 10086
         },
         {
             "tag": "File Creation Time: Sat Sep 13 06:14:17 UTC 2025",
@@ -2715,11 +2680,12 @@
     ],
     "route": {
         "auto_detect_interface": true,
+        "default_domain_resolver": "local",
         "final": "🐟 Remaining Website",
         "rules": [
             {
                 "protocol": "dns",
-                "outbound": "dns-out"
+                "action": "hijack-dns"
             },
             {
                 "clash_mode": "direct",
