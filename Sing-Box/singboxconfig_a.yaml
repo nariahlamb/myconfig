@@ -7,13 +7,13 @@
         "servers": [
             {
                 "tag": "remote",
-                "type": "tcp",
+                "type": "https",
                 "server": "1.0.0.1",
                 "detour": "♻️ All Nodes Except CN - Auto Select"
             },
             {
                 "tag": "local",
-                "type": "tcp",
+                "type": "https",
                 "server": "223.5.5.5"
             }
         ],
