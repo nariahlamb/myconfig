@@ -175,8 +175,9 @@
     "outbounds": [
         {
             "tag": "reject",
-            "type": "selector",
-            "outbounds": []
+            "type": "http",
+            "server": "255.255.255.255",
+            "server_port": "10086"
         },
         {
             "tag": "🚀 Node Group - 1",
